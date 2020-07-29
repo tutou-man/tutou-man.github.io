@@ -1,4 +1,4 @@
-## Welcome to youbiTools
+## Welcome to YoubiTools
 
-You can use the youbiTools to Compress yours CSS code
+You can use the YoubiTools to compress yours CSS code
 

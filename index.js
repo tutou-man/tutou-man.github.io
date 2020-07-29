@@ -40,3 +40,21 @@ function codeZip(obj) {
     }
 }
 var code = new codeZip(zip('codeText'));
+
+var cssbtn = document.querySelector('.css')
+var csszip = document.querySelector('.csszip')
+var jsbtn = document.querySelector('.js')
+var jszip = document.querySelector('.jszip')
+
+cssbtn.onclick = function(){
+    cssbtn.style.color = '#a6d73a'
+    jsbtn.style.color = '#000000'
+    csszip.style.display = 'block'
+    jszip.style.display = 'none'
+}
+jsbtn.onclick = function(){
+    cssbtn.style.color = '#000000'
+    jsbtn.style.color = '#a6d73a'
+    csszip.style.display = 'none'
+    jszip.style.display = 'block'
+}

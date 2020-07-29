@@ -7,7 +7,7 @@ function codeZip(obj) {
         if (!this.codeZ || this.codeZ == "")
             this.codeZ = code;
         if (code == "")
-            alert('请粘贴CSS样式表');
+            alert('请粘贴CSS样式表(Please paste CSS style sheet)');
         code = code.replace(/(\n|\t|\s)*/ig, '$1');
         code = code.replace(/\n|\t|\s(\{|\}|\,|\:|\;)/ig, '$1');
         code = code.replace(/(\{|\}|\,|\:|\;)\s/ig, '$1');

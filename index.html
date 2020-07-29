@@ -6,29 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
     <title>CSS美化压缩格式化</title>
 </head>
-<style>
-    html,body {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-    }
-    fieldset {
-        margin: 10px;
-    }
-    textarea {
-        box-sizing: border-box;
-        width: 100%;
-        border: 1px solid #000;
-        display: block;
-        padding: 10px;
-        background: #fff;
-        text-align: justify;
-        word-break: break-all;
-    }
-    button {
-        margin-top: 10px;
-    }
-</style>
+<link rel="stylesheet" href="index.css">
 <body>
     <fieldset>
         <legend>CSS样式表</legend>
@@ -39,48 +17,5 @@
         <button type="button" onclick="zip('codeText').value=code.Z();">还原代码</button>
     </fieldset>
 </body>
-<script>
-    function zip(id) {
-        return document.getElementById(id);
-    }
-    function codeZip(obj) {
-        this.S = function () {
-            var code = obj.value;
-            if (!this.codeZ || this.codeZ == "")
-                this.codeZ = code;
-            if (code == "")
-                alert('请粘贴CSS样式表');
-            code = code.replace(/(\n|\t|\s)*/ig, '$1');
-            code = code.replace(/\n|\t|\s(\{|\}|\,|\:|\;)/ig, '$1');
-            code = code.replace(/(\{|\}|\,|\:|\;)\s/ig, '$1');
-            return code;
-        }
-        this.A = function () {
-            var code = this.S();
-            return code;
-        }
-        this.B = function () {
-            var code = this.S();
-            code = code.replace(/(\{)/ig, ' $1');
-            code = code.replace(/(\{|\;)/ig, '$1\n\t');
-            code = code.replace(/\t*(\})/ig, '$1\n');
-            code = code.replace(/(\*\/)/ig, '$1\n');
-            return code;
-        }
-        this.C = function () {
-            var code = this.S();
-            code = code.replace(/(\})/ig, '$1\n');
-            code = code.replace(/(\*\/)/ig, '$1\n');
-            return code;
-        }
-        this.Z = function () {
-            return (this.codeZ) ? this.codeZ : obj.value;
-        }
-        var my = this;
-        obj.onkeydown = function () {
-            my.codeZ = "";
-        }
-    }
-    var code = new codeZip(zip('codeText'));
-</script>
+<script src="index.js"></script>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta name='renderer' content='webkit'>
@@ -7,8 +8,11 @@
     <title>CSS美化压缩格式化</title>
 </head>
 <link rel="stylesheet" href="index.css">
+
 <body>
-    <fieldset>
+    <nav><span class="css">css压缩</span><span class="js">js压缩</span></nav>
+
+    <fieldset class="csszip">
         <legend>CSS样式表</legend>
         <textarea id="codeText" name="codeText" rows="20" placeholder="在这里键入你的css代码"></textarea>
         <button type="button" onclick="zip('codeText').value=code.A();">压缩代码</button>
@@ -16,6 +20,10 @@
         <button type="button" onclick="zip('codeText').value=code.C();">格式(单行)</button>
         <button type="button" onclick="zip('codeText').value=code.Z();">还原代码</button>
     </fieldset>
+    <fieldset class="jszip">
+        <legend>JS代码</legend>
+    </fieldset>
 </body>
 <script src="index.js"></script>
+
 </html>

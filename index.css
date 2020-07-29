@@ -1,11 +1,20 @@
-html,body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+nav {
+    text-align: center;
 }
+
+nav span {
+    cursor: pointer;
+}
+
+nav .css {
+    margin-right: 20px;
+    color:#a6d73a
+}
+
 fieldset {
     margin: 10px;
 }
+
 textarea {
     box-sizing: border-box;
     width: 100%;
@@ -16,6 +25,10 @@ textarea {
     text-align: justify;
     word-break: break-all;
 }
+
 button {
     margin-top: 10px;
+}
+.jszip {
+    display: none;
 }

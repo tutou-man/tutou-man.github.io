@@ -1,4 +1,4 @@
-html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset,img{margin:0;padding:0;font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Heiti SC",Arial,Tahoma,Verdana,sans-serif}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset,img{margin:0;padding:0;font-family:"Microsoft YaHei",'syht', "PingFang SC","Hiragino Sans GB","Heiti SC",Arial,Tahoma,Verdana,sans-serif}
 ul,ol,dl{list-style-type:none}
 html,body{*position:static;}
 html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;word-wrap:break-word;overflow:-moz-scrollbars-vertical;zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}

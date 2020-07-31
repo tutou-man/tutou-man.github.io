@@ -1,4 +1,4 @@
-html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset,img{margin:0;padding:0;font-family:"Microsoft YaHei",'syht', "PingFang SC","Hiragino Sans GB","Heiti SC",Arial,Tahoma,Verdana,sans-serif}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset,img{margin:0;padding:0;font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Heiti SC",Arial,Tahoma,Verdana,sans-serif}
 ul,ol,dl{list-style-type:none}
 html,body{*position:static;}
 html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;word-wrap:break-word;overflow:-moz-scrollbars-vertical;zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}
@@ -30,6 +30,7 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 .fl{float:left;}
 .fr{float:right;}
 
+html{background: #fbfbfb;}
 nav{text-align:center;}
 nav span{cursor:pointer;}
 nav .css{margin-right:20px;color:#a6d73a;}
@@ -37,3 +38,4 @@ fieldset{margin:10px;}
 textarea{box-sizing:border-box;width:100%;border:1px solid #000;display:block;padding:10px;background:#fff;text-align:justify;word-break:break-all;border-radius: 5px;}
 button{margin-top:10px;padding:10px;}
 .jszip{display:none;}
+iframe{width: 100%;height:600px;overflow: hidden;}

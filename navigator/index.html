@@ -16,21 +16,21 @@
 <script>
   var pbox = document.querySelector(".p")
   var tablebox = document.querySelector(".table")
-  pbox.innerHTML = "IP: " + returnCitySN['cip'] + "<br><br>"
+  pbox.innerHTML = "IP地址: " + returnCitySN['cip'] + "<br><br>"
   +"地区代码: " + returnCitySN['cid'] + "<br><br>"
   +"所在地: " + returnCitySN['cname'] + "<br><br>"
-  +"userAgent: " + navigator.userAgent + "<br><br>"
-  +"appName: " + navigator.appName + "<br><br>"
-  +"appCodeName: " + navigator.appCodeName + "<br><br>"
-  +"appVersion: " + navigator.appVersion + "<br><br>"
-  +"appMinorVersion: " + navigator.appMinorVersion + "<br><br>"
-  +"platform: " + navigator.platform + "<br><br>"
-  +"cookieEnabled: " + navigator.cookieEnabled + "<br><br>"
-  +"onLine: " + navigator.onLine + "<br><br>"
-  +"userLanguage: " + navigator.language + "<br><br>";
+  +"用户表头: " + navigator.userAgent + "<br><br>"
+  +"设备名称: " + navigator.appName + "<br><br>"
+  +"设备代码: " + navigator.appCodeName + "<br><br>"
+  +"版本信息: " + navigator.appVersion + "<br><br>"
+  +"次要版本: " + navigator.appMinorVersion + "<br><br>"
+  +"硬件平台: " + navigator.platform + "<br><br>"
+  +"是否开启cookie: " + navigator.cookieEnabled + "<br><br>"
+  +"是否在线: " + navigator.onLine + "<br><br>"
+  +"用户语言: " + navigator.language + "<br><br>";
   var pluginsLength = navigator.plugins.length;
   if(pluginsLength > 0){
-    tablebox.innerHTML = pluginsLength + " Plugin(s)<br>" + '<table id="pluginTable" style="width:100%"><thead>' + '<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>' + '</thead><tbody></tbody></table>';
+    tablebox.innerHTML = pluginsLength + " 个浏览器插件<br>" + '<table id="pluginTable" style="width:100%"><thead>' + '<tr><th>插件名称</th><th>we文件名</th><th>描述</th><th>版本</th></tr>' + '</thead><tbody></tbody></table>';
     var table = document.getElementById('pluginTable');
     for(var i = 0; i < pluginsLength; i++) {
       let newRow = table.insertRow();

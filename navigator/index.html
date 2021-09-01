@@ -30,7 +30,7 @@
   +"用户语言: " + navigator.language + "<br><br>";
   var pluginsLength = navigator.plugins.length;
   if(pluginsLength > 0){
-    tablebox.innerHTML = pluginsLength + " 个浏览器插件<br>" + '<table id="pluginTable" style="width:100%"><thead>' + '<tr><th>插件名称</th><th>we文件名</th><th>描述</th><th>版本</th></tr>' + '</thead><tbody></tbody></table>';
+    tablebox.innerHTML = pluginsLength + " 个浏览器插件<br>" + '<table id="pluginTable" style="width:100%"><thead>' + '<tr><th>插件名称</th><th>文件名</th><th>描述</th><th>版本</th></tr>' + '</thead><tbody></tbody></table>';
     var table = document.getElementById('pluginTable');
     for(var i = 0; i < pluginsLength; i++) {
       let newRow = table.insertRow();

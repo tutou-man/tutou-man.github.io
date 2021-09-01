@@ -10,24 +10,28 @@
 </head>
 
 <body>
+  <div class="p"></div>
+  <div class="table"></div>
 </body>
 <script>
-  document.write("IP: " + returnCitySN['cip'] + "<br><br>");
-  document.write("地区代码: " + returnCitySN['cid'] + "<br><br>");
-  document.write("所在地: " + returnCitySN['cname'] + "<br><br>");
-  document.write("userAgent: " + navigator.userAgent + "<br><br>");
-  document.write("appName: " + navigator.appName + "<br><br>");
-  document.write("appCodeName: " + navigator.appCodeName + "<br><br>");
-  document.write("appVersion: " + navigator.appVersion + "<br><br>");
-  document.write("appMinorVersion: " + navigator.appMinorVersion + "<br><br>");
-  document.write("platform: " + navigator.platform + "<br><br>");
-  document.write("cookieEnabled: " + navigator.cookieEnabled + "<br><br>");
-  document.write("onLine: " + navigator.onLine + "<br><br>");
-  document.write("userLanguage: " + navigator.language + "<br><br>");
-  document.write("mimeTypes.description: " + navigator.mimeTypes[1].description + "<br><br>");
-  document.write("mimeTypes.type: " + navigator.mimeTypes[1].type + "<br><br>");
+  var pbox = document.querySelector(".p")
+  var tablebox = document.querySelector(".table")
+  pbox.innerHTML = "IP: " + returnCitySN['cip'] + "<br><br>"
+  +"地区代码: " + returnCitySN['cid'] + "<br><br>";
+  +"所在地: " + returnCitySN['cname'] + "<br><br>";
+  +"userAgent: " + navigator.userAgent + "<br><br>";
+  +"appName: " + navigator.appName + "<br><br>";
+  +"appCodeName: " + navigator.appCodeName + "<br><br>";
+  +"appVersion: " + navigator.appVersion + "<br><br>";
+  +"appMinorVersion: " + navigator.appMinorVersion + "<br><br>";
+  +"platform: " + navigator.platform + "<br><br>";
+  +"cookieEnabled: " + navigator.cookieEnabled + "<br><br>";
+  +"onLine: " + navigator.onLine + "<br><br>";
+  +"userLanguage: " + navigator.language + "<br><br>";
+  +"mimeTypes.description: " + navigator.mimeTypes[1].description + "<br><br>";
+  +"mimeTypes.type: " + navigator.mimeTypes[1].type + "<br><br>";
   var pluginsLength = navigator.plugins.length;
-  document.write = pluginsLength + " Plugin(s)<br>" + '<table id="pluginTable"><thead>' + '<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>' + '</thead><tbody></tbody></table>';
+  tablebox.innerHTML = pluginsLength + " Plugin(s)<br>" + '<table id="pluginTable"><thead>' + '<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>' + '</thead><tbody></tbody></table>';
   var table = document.getElementById('pluginTable');
   for(var i = 0; i < pluginsLength; i++) {
     let newRow = table.insertRow();

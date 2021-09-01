@@ -5,14 +5,27 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>信息</title>
+  <title>设备信息</title>
+  <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 </head>
 
-<body><noscript><strong>We're sorry but app doesn't work properly without JavaScript enabled. Please enable it to
-      continue.</strong></noscript>
-  <div id="app"></div>
+<body>
 </body>
 <script>
-  document.getElementById('app').innerText = navigator.appVersion
+  document.write("IP: " + returnCitySN['cip'] + "<br><br>");
+  document.write("地区代码: " + returnCitySN['cid'] + "<br><br>");
+  document.write("所在地: " + returnCitySN['cname'] + "<br><br>");
+  document.write("userAgent: " + navigator.userAgent + "<br><br>");
+  document.write("appName: " + navigator.appName + "<br><br>");
+  document.write("appCodeName: " + navigator.appCodeName + "<br><br>");
+  document.write("appVersion: " + navigator.appVersion + "<br><br>");
+  document.write("appMinorVersion: " + navigator.appMinorVersion + "<br><br>");
+  document.write("platform: " + navigator.platform + "<br><br>");
+  document.write("cookieEnabled: " + navigator.cookieEnabled + "<br><br>");
+  document.write("onLine: " + navigator.onLine + "<br><br>");
+  document.write("userLanguage: " + navigator.language + "<br><br>");
+  document.write("mimeTypes.description: " + navigator.mimeTypes[1].description + "<br><br>");
+  document.write("mimeTypes.type: " + navigator.mimeTypes[1].type + "<br><br>");
+  document.write("plugins.description: " + navigator.plugins[3].description + "<br><br>");
 </script>
 </html>

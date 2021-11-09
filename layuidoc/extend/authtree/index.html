@@ -7,24 +7,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
   <meta name="description" content="layui 自身提供一个 tree 树形菜单，但是并不适用于权限控制中，比如：当我需要选择用户组的权限（树形结构），需要使用 form 提交用户所选权限数据的时候。"> 
-  <link rel="stylesheet" href="/t/font_24081_60slu02pimt.css">
-  <link rel="stylesheet" href="/layui/dist/css/layui.css">
-  <link rel="stylesheet" href="/static/css/fly/global.css" charset="utf-8">
-  <link rel="stylesheet" href="/static/css/global.css" charset="utf-8">
-  <link rel="stylesheet" href="/static/css/global.css" charset="utf-8">
+  <link rel="stylesheet" href="t/font_24081_60slu02pimt.css">
+  <link rel="stylesheet" href="layui/dist/css/layui.css">
+  <link rel="stylesheet" href="static/css/fly/global.css" charset="utf-8">
+  <link rel="stylesheet" href="static/css/global.css" charset="utf-8">
+  <link rel="stylesheet" href="static/css/global.css" charset="utf-8">
  </head>
  <body>
   <div class="layui-header header header-extends" style="background-color: #24262F;"> 
-   <div class="layui-container"> <a class="logo" href="https://layui.itmtr.cn/"> <img src="/static/images/layui/logo.png" alt="layui"> </a> 
+   <div class="layui-container"> <a class="logo" href="https://layui.itmtr.cn/"> <img src="static/images/layui/logo.png" alt="layui"> </a> 
     <div class="layui-form component" lay-filter="LAY-site-header-component"></div> 
     <ul class="layui-nav"> 
-     <li class="layui-nav-item layui-hide-xs"> <a href="//layui.itmtr.cn/">框架</a> </li> 
-     <li class="layui-nav-item layui-hide-xs layui-this"> <a href="/extend/index.html">扩展</a> </li> 
+     <li class="layui-nav-item layui-hide-xs"> <a href="/layui.itmtr.cn/">框架</a> </li> 
+     <li class="layui-nav-item layui-hide-xs layui-this"> <a href="extend/index.html">扩展</a> </li> 
      <li class="layui-nav-item"> <a href="javascript:;">周边</a> 
       <dl class="layui-nav-child layui-nav-child-c"> 
-       <dd lay-unselect> <a href="//layui.itmtr.cn/alone.html" target="_blank">独立组件</a> 
+       <dd lay-unselect> <a href="/layui.itmtr.cn/alone.html" target="_blank">独立组件</a> 
        </dd> 
-       <dd class="layui-hide-sm layui-show-xs" lay-unselect> <a href="/extend/index.html">扩展组件</a> 
+       <dd class="layui-hide-sm layui-show-xs" lay-unselect> <a href="extend/index.html">扩展组件</a> 
         <hr> 
        </dd> 
       </dl> </li> 
@@ -40,14 +40,14 @@
     </div> 
    </div> 
    <h1 class="fly-extend-banner-title">layui 第三方组件平台</h1> 
-   <div class="fly-extend-banner-release"> <a href="/extend/index.html" class="layui-btn layui-btn-lg">返回首页</a>
+   <div class="fly-extend-banner-release"> <a href="extend/index.html" class="layui-btn layui-btn-lg">返回首页</a>
    </div> 
   </div>
   <div class="fly-extend-detail layui-card"> 
    <div class="layui-container"> 
     <div class="fly-extend-list-header"> 
      <h1 class="fly-extend-title layui-elip"> <a>authtree 无限级权限控制树</a> <span class="layui-badge layui-bg-green layui-hide-xs">authtree</span> </h1> 
-     <div class="fly-extend-list-info"> <a href="/u/11634672/index.html" target="_blank" class="fly-extend-list-user" title="发布者"> <cite class="layui-hide-xs">藏锋**丨</cite> <img src="/qqapp/101235792/905B6DB06066DB844F6F30D4E770668F/100" alt="藏锋**丨"> </a> 
+     <div class="fly-extend-list-info"> <a href="u/11634672/index.html" target="_blank" class="fly-extend-list-user" title="发布者"> <cite class="layui-hide-xs">藏锋**丨</cite> <img src="qqapp/101235792/905B6DB06066DB844F6F30D4E770668F/100" alt="藏锋**丨"> </a> 
      </div> 
     </div> 
     <blockquote class="fly-extend-list-desc layui-elem-quote"> 
@@ -112,20 +112,20 @@
         社区期望收集
        </div>如果您有好的建议或者想法，可以回帖或者发送到我的邮箱( admin@<a href="javascript:;" class="fly-aite">wj2015.com</a> )，如果建议合适，我将收集于此便于以后更新。
        <br>
-       <img src="/upload/2018_11/11634672_1542620829467_98911.png"> 
+       <img src="upload/2018_11/11634672_1542620829467_98911.png"> 
        <br>
        <hr>
        <div class="layui-elem-quote">
         快速上手
        </div>由于插件规模扩大和功能的增加，导致插件上手难度有一定的增加。但如果只使用核心功能，其实没有必要去研究插件的所有方法，故在此把此插件解决核心需求的方法展示出来。
        <br>
-       <img src="/upload/2018_10/11634672_1539135295019_98915.png"> 
+       <img src="upload/2018_10/11634672_1539135295019_98915.png"> 
        <br>
        <pre>&lt;form class="layui-form"&gt;<br>    &lt;div class="layui-form-item"&gt;<br>        &lt;label class="layui-form-label"&gt;角色名称&lt;/label&gt;<br>        &lt;div class="layui-input-block"&gt;<br>            &lt;input class="layui-input" type="text" name="name" placeholder="请输入角色名称" /&gt;<br>        &lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;div class="layui-form-item"&gt;<br>        &lt;label class="layui-form-label"&gt;选择权限&lt;/label&gt;<br>        &lt;div class="layui-input-block"&gt;<br>            &lt;div id="LAY-auth-tree-index"&gt;&lt;/div&gt;<br>        &lt;/div&gt;<br>    &lt;/div&gt;<br>    &lt;div class="layui-form-item"&gt;<br>        &lt;div class="layui-input-block"&gt;<br>            &lt;button class="layui-btn" type="submit" lay-submit lay-filter="LAY-auth-tree-submit"&gt;提交&lt;/button&gt;<br>            &lt;button class="layui-btn layui-btn-primary" type="reset"&gt;重置&lt;/button&gt;<br>        &lt;/div&gt;<br>    &lt;/div&gt;<br>&lt;/form&gt;</pre>
-       <img src="/upload/2018_10/11634672_1539135373548_55768.png"> 
+       <img src="upload/2018_10/11634672_1539135373548_55768.png"> 
        <br>
        <pre>layui.config({<br>	base: 'extends/',<br>}).extend({<br>	authtree: 'authtree',<br>});</pre>
-       <img src="/upload/2018_10/11634672_1539135426287_85043.png"> 
+       <img src="upload/2018_10/11634672_1539135426287_85043.png"> 
        <br>
        <pre>layui.use(['jquery', 'authtree', 'form', 'layer'], function(){<br>	var $ = layui.jquery;<br>	var authtree = layui.authtree;<br>	var form = layui.form;<br>	var layer = layui.layer;<br>	// 一般来说，权限数据是异步传递过来的<br>	$.ajax({<br>		url: 'tree.json',<br>		dataType: 'json',<br>		success: function(data){<br>            var trees = data.data.trees;<br>            // 如果后台返回的不是树结构，请使用 authtree.listConvert 转换<br>            authtree.render('#LAY-auth-tree-index', trees, {<br>				inputname: 'authids[]', <br>				layfilter: 'lay-check-auth', <br>				autowidth: true,<br>			});<br>        }<br>    });<br>});</pre>至此，一个最基础的权限树就已经完成了，如果想实现演示GIF内的各种扩展功能，请继续往下看，并参考源码
        <br>
@@ -138,7 +138,7 @@
        <div class="layui-elem-quote">
         函数列表
        </div>
-       <img src="/upload/2018_11/11634672_1542620889456_10271.png"> 
+       <img src="upload/2018_11/11634672_1542620889456_10271.png"> 
        <br>
        <br>
        <div class="layui-elem-quote">
@@ -146,7 +146,7 @@
        </div>render 参数配置
        <br>render()函数是本插件的核心方法，调用 `render(dst, trees, opt)` 函数时，opt 中可以传递的参数如下
        <br>
-       <img src="/upload/2018_11/11634672_1542621271281_49778.png"> 
+       <img src="upload/2018_11/11634672_1542621271281_49778.png"> 
        <br>
        <br>
        <div class="layui-elem-quote">
@@ -159,14 +159,14 @@
        </div> treeConvertSelect参数配置
        <br>`treeConverSelect` 是用于树转换为『单选树』的方法，其中 opt 参数如下
        <br>
-       <img src="/upload/2018_11/11634672_1542620975403_22893.png"> 
+       <img src="upload/2018_11/11634672_1542620975403_22893.png"> 
        <br>
        <br>listConvert 参数配置
        <br>listConvert 是用于转换列表和树结构的方法，参数比较灵活，调用 `listConvert(list, opt)` 时，opt可传入参数如下
        <br>
-       <img src="/upload/2018_10/11634672_1539135878447_32675.png"> 
+       <img src="upload/2018_10/11634672_1539135878447_32675.png"> 
        <br>
-       <img src="/upload/2018_10/11634672_1539135920787_87356.png"> 
+       <img src="upload/2018_10/11634672_1539135920787_87356.png"> 
        <br>
        <br>
        <div class="layui-elem-quote">
@@ -185,7 +185,7 @@
        <div class="layui-elem-quote">
         监听事件：
        </div>
-       <img src="/upload/2018_9/11634672_1537689529490_85318.jpg"> 
+       <img src="upload/2018_9/11634672_1537689529490_85318.jpg"> 
        <br>
        <div class="layui-elem-quote">
         功能概览：
@@ -246,7 +246,7 @@
        <h3 class="layui-inline layui-this">下载</h3> 
       </div> 
       <div class="layui-card-body detail-body layui-text"> 
-       <div class="layui-btn-container"> <a href="//cdn.layui.com/extend/11634672_1563610689226_80251.zip" target="_blank" class="layui-btn layui-btn-lg layui-btn-primary"> 立即下载 </a> <a href="https://gitee.com/wangerzi/layui-authtree" target="_blank" class="layui-btn layui-btn-lg layui-btn-primary layui-border-red"> 去码云下载 </a> <a href="https://github.com/wangerzi/layui-authtree" target="_blank" class="layui-btn layui-btn-lg layui-btn-primary layui-border-black"> 去 GitHub 下载 </a> 
+       <div class="layui-btn-container"> <a href="/cdn.layui.com/extend/11634672_1563610689226_80251.zip" target="_blank" class="layui-btn layui-btn-lg layui-btn-primary"> 立即下载 </a> <a href="https://gitee.com/wangerzi/layui-authtree" target="_blank" class="layui-btn layui-btn-lg layui-btn-primary layui-border-red"> 去码云下载 </a> <a href="https://github.com/wangerzi/layui-authtree" target="_blank" class="layui-btn layui-btn-lg layui-btn-primary layui-border-black"> 去 GitHub 下载 </a> 
         <blockquote class="layui-elem-quote">
           该扩展组件由第三方用户主动投递，并由其自身进行维护，本站仅做收集。 
         </blockquote> 
@@ -257,11 +257,11 @@
    </div>
   </div>
   <div class="fly-footer"> 
-   <p>Copyright © 2021 <a href="/index.html">layui.itmtr.cn</a> MIT Licensed</p>
+   <p>Copyright © 2021 <a href="index.html">layui.itmtr.cn</a> MIT Licensed</p>
   </div>
-  <script src="/layui/dist/layui.js"></script>
+  <script src="layui/dist/layui.js"></script>
   <script>// common</script>
 
  </body>
-<script src="/common/common.js"></script>
+<script src="common/common.js"></script>
 </html>

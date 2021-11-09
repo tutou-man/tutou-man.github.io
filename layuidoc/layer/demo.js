@@ -703,7 +703,7 @@ layer.ready(function(){
       ,moveType: 1 //拖拽模式，0或者1
       ,resize: false
       ,content: ['<div style="padding: 15px; text-align: center; background-color: #e2e2e2;">'
-        ,'<a href="https://www.layui.com/admin/std/dist/views/" target="_blank"><img src="/upload/2018_5/168_1527691799254_76462.jpg" alt="layuiAdmin" style="width: 100%; height:149.78px;"></a>'
+        ,'<a href="https://www.layui.com/admin/std/dist/views/" target="_blank"><img src="upload/2018_5/168_1527691799254_76462.jpg" alt="layuiAdmin" style="width: 100%; height:149.78px;"></a>'
       ,'</div>'].join('')
       ,success: function(layero, index){
         var btn = layero.find('.layui-layer-btn');

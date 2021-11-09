@@ -3,9 +3,9 @@
  <head>
   <meta charset="utf-8">
   <title>更多示例 - layer弹层组件</title>
-  <link rel="stylesheet" href="/layui/dist/css/layui.css" media="all">
-  <link rel="stylesheet" href="/static/css/global.css" media="all">
-  <link rel="stylesheet" href="/layer/demo.css" media="all">
+  <link rel="stylesheet" href="layui/dist/css/layui.css" media="all">
+  <link rel="stylesheet" href="static/css/global.css" media="all">
+  <link rel="stylesheet" href="layer/demo.css" media="all">
   <style>
 .box{width:728px;}
 .box .layui-btn{margin-top: 10px; margin-left: 0; margin-right: 7px;}
@@ -15,9 +15,9 @@
  </head>
  <body>
   <div class="header">
-   <div class="layui-main"> <a class="logo" href="/index.html"> <img src="/static/images/layui/logo.png" alt="layui"> </a>
+   <div class="layui-main"> <a class="logo" href="index.html"> <img src="static/images/layui/logo.png" alt="layui"> </a>
     <ul class="layui-nav">
-     <li class="layui-nav-item layui-this"> <a href="/layer/index.html">layer</a> </li>
+     <li class="layui-nav-item layui-this"> <a href="layer/index.html">layer</a> </li>
     </ul>
    </div>
   </div>
@@ -81,7 +81,7 @@ layer.open({
 //边缘弹出
 layer.open({
   type: 1
-  ,offset: 't' //具体配置参考：<a href="/doc/modules/layer.html" target="_blank">offset参数项</a>
+  ,offset: 't' //具体配置参考：<a href="doc/modules/layer.html" target="_blank">offset参数项</a>
   ,content: '&lt;div style="padding: 20px 80px;"&gt;内容&lt;/div&gt;'
   ,btn: '关闭全部'
   ,btnAlign: 'c' //按钮居中
@@ -95,11 +95,11 @@ layer.open({
   </div>
   <div class="layui-footer footer footer-index">
    <div class="layui-main">
-    <p>© 2021 <a href="/index.html">layui.itmtr.cn</a> MIT license</p>
+    <p>© 2021 <a href="index.html">layui.itmtr.cn</a> MIT license</p>
    </div>
   </div>
-  <script src="/jquery/1.12.3/jquery.min.js"></script>
-  <script src="/layui/release/layer/dist/layer.js"></script>
+  <script src="jquery/1.12.3/jquery.min.js"></script>
+  <script src="layui/release/layer/dist/layer.js"></script>
   <script>
 var demo = {
   confirmTm: function(){
@@ -157,5 +157,5 @@ $('.layui-btn').on('click', function(){
 });
 </script>
  </body>
-<script src="/common/common.js"></script>
+<script src="common/common.js"></script>
 </html>

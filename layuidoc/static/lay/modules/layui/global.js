@@ -16,7 +16,7 @@ layui.define(['code', 'element', 'table', 'util', 'carousel', 'laytpl'], functio
   ,$win = $(window), $body = $('body');
 
   //ban iframe
-  ;!function(){self!==parent&&(location.href="//www.baidu.com/")}();
+  ;!function(){self!==parent&&(location.href="/www.baidu.com/")}();
 
 
   //阻止 IE7 以下访问
@@ -145,8 +145,8 @@ layui.define(['code', 'element', 'table', 'util', 'carousel', 'laytpl'], functio
       ,'<option value="modules/util.html">util 工具集</option>'
       ,'<option value="modules/code.html">code 代码文本行修饰</option>'
 
-      ,'<option value="/layim/">layim</option>'
-      ,'<option value="/layuiadmin/">layuiadmin</option>'
+      ,'<option value="layim/">layim</option>'
+      ,'<option value="layuiadmin/">layuiadmin</option>'
     ,'</select>'
     ,'<i class="layui-icon layui-icon-search"></i>'].join(''));
 
@@ -479,7 +479,7 @@ layui.define(['code', 'element', 'table', 'util', 'carousel', 'laytpl'], functio
 
         layer.confirm([
           '<div class="layui-text" style="padding: 10px 0;">'
-          ,'请先阅读《<a href="/about/disclaimer.html" target="_blank">layui 开源界面框架免责声明</a>》'
+          ,'请先阅读《<a href="about/disclaimer.html" target="_blank">layui 开源界面框架免责声明</a>》'
           ,'，再进行下载</div>'
         ].join(''), {
           title: '下载提示'
@@ -663,7 +663,7 @@ layui.define(['code', 'element', 'table', 'util', 'carousel', 'laytpl'], functio
       DemoCode.val()
       ,'<body>'
       ,global.preview
-      ,'\n<script src="/layui/dist/layui.js" charset="utf-8"></script>'
+      ,'\n<script src="layui/dist/layui.js" charset="utf-8"></script>'
       ,'\n<!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->'
       ,$('#LAY_democodejs').html()
       ,'\n</body>\n</html>'

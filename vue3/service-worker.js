@@ -1378,407 +1378,407 @@ self.__precacheManifest = [
     "revision": "9eec04e01304c8c934c9efdbe5550bbb"
   },
   {
-    "url": "vue3/images/AccessibilityChromeDeveloperTools.png",
+    "url": "images/AccessibilityChromeDeveloperTools.png",
     "revision": "25c2a61b52ea8753aa4693a16abaa43f"
   },
   {
-    "url": "vue3/images/AccessibleARIAdescribedby.png",
+    "url": "images/AccessibleARIAdescribedby.png",
     "revision": "d2b26eb9ae0006509801691c289a86d3"
   },
   {
-    "url": "vue3/images/AccessibleARIAlabelDevTools.png",
+    "url": "images/AccessibleARIAlabelDevTools.png",
     "revision": "05cb34b380cef9627d5c9a3c0ba64dca"
   },
   {
-    "url": "vue3/images/AccessibleARIAlabelledbyDevTools.png",
+    "url": "images/AccessibleARIAlabelledbyDevTools.png",
     "revision": "1554e00985256ca1042caffbf59709cc"
   },
   {
-    "url": "vue3/images/AccessibleLabelChromeDevTools.png",
+    "url": "images/AccessibleLabelChromeDevTools.png",
     "revision": "5b9d491c368093887624f4dfacdb6431"
   },
   {
-    "url": "vue3/images/breakpoint_hit.png",
+    "url": "images/breakpoint_hit.png",
     "revision": "5c75aa35c604ca38e38a0c0c56421fa5"
   },
   {
-    "url": "vue3/images/breakpoint_set.png",
+    "url": "images/breakpoint_set.png",
     "revision": "98f75020207a37131d11b433f44d3faa"
   },
   {
-    "url": "vue3/images/coin-bch.png",
+    "url": "images/coin-bch.png",
     "revision": "ddfab54149483e02f3cd540a47e2782b"
   },
   {
-    "url": "vue3/images/coin-btc.png",
+    "url": "images/coin-btc.png",
     "revision": "d90559bb202766dd6ddabf71dd1680be"
   },
   {
-    "url": "vue3/images/coin-eth.png",
+    "url": "images/coin-eth.png",
     "revision": "70ae70292937880fe9e77c2c7dc38f86"
   },
   {
-    "url": "vue3/images/coin-ltc.png",
+    "url": "images/coin-ltc.png",
     "revision": "9e756bd611ac7355515153cecbc20d36"
   },
   {
-    "url": "vue3/images/components_provide.png",
+    "url": "images/components_provide.png",
     "revision": "f7110a1bae2d0744997012ca656d8fa1"
   },
   {
-    "url": "vue3/images/components.png",
+    "url": "images/components.png",
     "revision": "b5c08269dfc26ae6d7db3801e9efd296"
   },
   {
-    "url": "vue3/images/config_add.png",
+    "url": "images/config_add.png",
     "revision": "82c9fdab7a4f6143e015285ec93a40f9"
   },
   {
-    "url": "vue3/images/css-vs-js-ease.svg",
+    "url": "images/css-vs-js-ease.svg",
     "revision": "698b44c0a912788e52ea14ee10ce2846"
   },
   {
-    "url": "vue3/images/devtools-timetravel.gif",
+    "url": "images/devtools-timetravel.gif",
     "revision": "fca84f3fb8a8d10274eb2fc7ed9b65f9"
   },
   {
-    "url": "vue3/images/dom-tree.png",
+    "url": "images/dom-tree.png",
     "revision": "f70b86bfbbfe1962dc5d6125105f1122"
   },
   {
-    "url": "vue3/images/editable-svg-icons-sizes.png",
+    "url": "images/editable-svg-icons-sizes.png",
     "revision": "43fe12e12ab70fbc0f4bc608fa68a4fd"
   },
   {
-    "url": "vue3/images/editable-svg-icons.jpg",
+    "url": "images/editable-svg-icons.jpg",
     "revision": "0ffbaae28a3a71279e89c4e515f3519b"
   },
   {
-    "url": "vue3/images/icons/android-icon-144x144.png",
+    "url": "images/icons/android-icon-144x144.png",
     "revision": "e67b8d54852c2fbf40be2a8eb0590f5b"
   },
   {
-    "url": "vue3/images/icons/android-icon-192x192.png",
+    "url": "images/icons/android-icon-192x192.png",
     "revision": "5d10eaab941eb596ee59ffc53652d035"
   },
   {
-    "url": "vue3/images/icons/android-icon-36x36.png",
+    "url": "images/icons/android-icon-36x36.png",
     "revision": "bb757d234def1a6b53d793dbf4879578"
   },
   {
-    "url": "vue3/images/icons/android-icon-48x48.png",
+    "url": "images/icons/android-icon-48x48.png",
     "revision": "0d33c4fc51e2bb020bf8dd7cd05db875"
   },
   {
-    "url": "vue3/images/icons/android-icon-72x72.png",
+    "url": "images/icons/android-icon-72x72.png",
     "revision": "702c4fafca31d670f9bd8b2d185ced39"
   },
   {
-    "url": "vue3/images/icons/android-icon-96x96.png",
+    "url": "images/icons/android-icon-96x96.png",
     "revision": "0ebff702851985ea6ba891cf6e6e7ddd"
   },
   {
-    "url": "vue3/images/icons/apple-icon-114x114.png",
+    "url": "images/icons/apple-icon-114x114.png",
     "revision": "f4fd30f3a26b932843b8c5cef9f2186e"
   },
   {
-    "url": "vue3/images/icons/apple-icon-120x120.png",
+    "url": "images/icons/apple-icon-120x120.png",
     "revision": "b6a574d63d52ef9c89189b67bcac5cbd"
   },
   {
-    "url": "vue3/images/icons/apple-icon-144x144.png",
+    "url": "images/icons/apple-icon-144x144.png",
     "revision": "e67b8d54852c2fbf40be2a8eb0590f5b"
   },
   {
-    "url": "vue3/images/icons/apple-icon-152x152.png",
+    "url": "images/icons/apple-icon-152x152.png",
     "revision": "f53787bf41febf2b044931a305ccaf2a"
   },
   {
-    "url": "vue3/images/icons/apple-icon-180x180.png",
+    "url": "images/icons/apple-icon-180x180.png",
     "revision": "9f6b1e3b92b2c5bd5b7d79501bb6e612"
   },
   {
-    "url": "vue3/images/icons/apple-icon-57x57.png",
+    "url": "images/icons/apple-icon-57x57.png",
     "revision": "83f622ba0994866abc56ace068b6551c"
   },
   {
-    "url": "vue3/images/icons/apple-icon-60x60.png",
+    "url": "images/icons/apple-icon-60x60.png",
     "revision": "643f761bc39f86c70f17cd1fed3b8e08"
   },
   {
-    "url": "vue3/images/icons/apple-icon-72x72.png",
+    "url": "images/icons/apple-icon-72x72.png",
     "revision": "702c4fafca31d670f9bd8b2d185ced39"
   },
   {
-    "url": "vue3/images/icons/apple-icon-76x76.png",
+    "url": "images/icons/apple-icon-76x76.png",
     "revision": "94d9af047b86d99657b5efb88a0d1c7b"
   },
   {
-    "url": "vue3/images/icons/apple-icon-precomposed.png",
+    "url": "images/icons/apple-icon-precomposed.png",
     "revision": "707758f591323153a4f1cb3a8d9641fa"
   },
   {
-    "url": "vue3/images/icons/apple-icon.png",
+    "url": "images/icons/apple-icon.png",
     "revision": "707758f591323153a4f1cb3a8d9641fa"
   },
   {
-    "url": "vue3/images/icons/bacancy_technology.png",
+    "url": "images/icons/bacancy_technology.png",
     "revision": "5810bb8253b1e35ba437373ff83f82d3"
   },
   {
-    "url": "vue3/images/icons/bulb.svg",
+    "url": "images/icons/bulb.svg",
     "revision": "570fe3dff7ac341af799819240c4c735"
   },
   {
-    "url": "vue3/images/icons/danger.svg",
+    "url": "images/icons/danger.svg",
     "revision": "65fd301d5e1cdff7fa2f3911622bb504"
   },
   {
-    "url": "vue3/images/icons/favicon-16x16.png",
+    "url": "images/icons/favicon-16x16.png",
     "revision": "a5a9da66870189b0539223c38c8a7749"
   },
   {
-    "url": "vue3/images/icons/favicon-32x32.png",
+    "url": "images/icons/favicon-32x32.png",
     "revision": "3d60db0d77303b2414ddd50cf2472bf7"
   },
   {
-    "url": "vue3/images/icons/favicon-96x96.png",
+    "url": "images/icons/favicon-96x96.png",
     "revision": "0ebff702851985ea6ba891cf6e6e7ddd"
   },
   {
-    "url": "vue3/images/icons/info.svg",
+    "url": "images/icons/info.svg",
     "revision": "a1e5ee15c1a7cf19a66663a168a52ca4"
   },
   {
-    "url": "vue3/images/icons/ms-icon-144x144.png",
+    "url": "images/icons/ms-icon-144x144.png",
     "revision": "e67b8d54852c2fbf40be2a8eb0590f5b"
   },
   {
-    "url": "vue3/images/icons/ms-icon-150x150.png",
+    "url": "images/icons/ms-icon-150x150.png",
     "revision": "e8cdf492981122a2548bc247c7b4067d"
   },
   {
-    "url": "vue3/images/icons/ms-icon-310x310.png",
+    "url": "images/icons/ms-icon-310x310.png",
     "revision": "1721f8303ec2349002b5980a01f27cef"
   },
   {
-    "url": "vue3/images/icons/ms-icon-70x70.png",
+    "url": "images/icons/ms-icon-70x70.png",
     "revision": "a110cf0132b00b23a8605ca72a8874ba"
   },
   {
-    "url": "vue3/images/icons/stop.svg",
+    "url": "images/icons/stop.svg",
     "revision": "6f57b84257162dde4203c0439c0ad90e"
   },
   {
-    "url": "vue3/images/imooc-ad3.png",
+    "url": "images/imooc-ad3.png",
     "revision": "a8b8084e0bb616cef5637f589d0c3a49"
   },
   {
-    "url": "vue3/images/lifecycle.svg",
+    "url": "images/lifecycle.svg",
     "revision": "d2f8a1b763c9d39f7511b5767b3dce79"
   },
   {
-    "url": "vue3/images/options-api.png",
+    "url": "images/options-api.png",
     "revision": "f268f15922a54dc18716ea6df8274691"
   },
   {
-    "url": "vue3/images/oxford-comma.jpg",
+    "url": "images/oxford-comma.jpg",
     "revision": "8a220093d78172e4eb9d98529f9fba05"
   },
   {
-    "url": "vue3/images/partners/monterail.png",
+    "url": "images/partners/monterail.png",
     "revision": "db165491374f80cc4f3190a0ebd918ad"
   },
   {
-    "url": "vue3/images/partners/vehikl.png",
+    "url": "images/partners/vehikl.png",
     "revision": "65f4ae56972001f689053fba43129433"
   },
   {
-    "url": "vue3/images/paypal.png",
+    "url": "images/paypal.png",
     "revision": "067bd556ce9e4c76538a8057adb6d596"
   },
   {
-    "url": "vue3/images/scoped-slot.png",
+    "url": "images/scoped-slot.png",
     "revision": "c6ef14ba02eac288245c5c5009d966cc"
   },
   {
-    "url": "vue3/images/sfc-with-preprocessors.png",
+    "url": "images/sfc-with-preprocessors.png",
     "revision": "68870d70ec2b0464fd25e44dcd9bdae7"
   },
   {
-    "url": "vue3/images/sfc.png",
+    "url": "images/sfc.png",
     "revision": "584b96a63fef7b46ababaff18de54a41"
   },
   {
-    "url": "vue3/images/slot.png",
+    "url": "images/slot.png",
     "revision": "00cf6bd787014eb22b2821d72b80212a"
   },
   {
-    "url": "vue3/images/sponsors/authing.svg",
+    "url": "images/sponsors/authing.svg",
     "revision": "fe3cf35736bbed30e479425bbd3623e5"
   },
   {
-    "url": "vue3/images/sponsors/bacancy_technology.png",
+    "url": "images/sponsors/bacancy_technology.png",
     "revision": "9a0590eb4ce29289b454240415611162"
   },
   {
-    "url": "vue3/images/sponsors/bestvpn_co.png",
+    "url": "images/sponsors/bestvpn_co.png",
     "revision": "afbe252b6b59bc3cdac2e7dec69eac39"
   },
   {
-    "url": "vue3/images/sponsors/dcloud1.png",
+    "url": "images/sponsors/dcloud1.png",
     "revision": "fd6cc1ee1e73e3f641c9c19f1c2e346b"
   },
   {
-    "url": "vue3/images/sponsors/dcloud2.png",
+    "url": "images/sponsors/dcloud2.png",
     "revision": "ad6bf984b1c91c89b0adcf07e60320dc"
   },
   {
-    "url": "vue3/images/sponsors/devexpress.png",
+    "url": "images/sponsors/devexpress.png",
     "revision": "a6d9c786a373088c8d238ca643293c17"
   },
   {
-    "url": "vue3/images/sponsors/fastcoding_inc.svg",
+    "url": "images/sponsors/fastcoding_inc.svg",
     "revision": "ff35e14cb519fe5d76e6e8d9444e4fa6"
   },
   {
-    "url": "vue3/images/sponsors/firestick_tricks.png",
+    "url": "images/sponsors/firestick_tricks.png",
     "revision": "1ee05223a5b12fe910cb8428d57223d8"
   },
   {
-    "url": "vue3/images/sponsors/flatlogic_templates.svg",
+    "url": "images/sponsors/flatlogic_templates.svg",
     "revision": "925f0c4421cc6d86ebc9d6788b519220"
   },
   {
-    "url": "vue3/images/sponsors/foo.png",
+    "url": "images/sponsors/foo.png",
     "revision": "1c9cde53bb9c98a316edc93d57684e4d"
   },
   {
-    "url": "vue3/images/sponsors/frontendlove.png",
+    "url": "images/sponsors/frontendlove.png",
     "revision": "b514babc53a0f3ddc854b0b14a54a489"
   },
   {
-    "url": "vue3/images/sponsors/hbuilder.png",
+    "url": "images/sponsors/hbuilder.png",
     "revision": "f269004b31954b02be293f6d59f14af3"
   },
   {
-    "url": "vue3/images/sponsors/html_burger.png",
+    "url": "images/sponsors/html_burger.png",
     "revision": "c7ce1344d001e7a236a89694ed59d988"
   },
   {
-    "url": "vue3/images/sponsors/imooc-sponsor.png",
+    "url": "images/sponsors/imooc-sponsor.png",
     "revision": "7ddc7f938fbbc08f816a888225786a4c"
   },
   {
-    "url": "vue3/images/sponsors/imooc-sponsor2.png",
+    "url": "images/sponsors/imooc-sponsor2.png",
     "revision": "ce9575f62520e0ac8b7d93ada2c6b274"
   },
   {
-    "url": "vue3/images/sponsors/inkoop.png",
+    "url": "images/sponsors/inkoop.png",
     "revision": "1cff77d2c927657d3aceeba2c12db892"
   },
   {
-    "url": "vue3/images/sponsors/intygrate.png",
+    "url": "images/sponsors/intygrate.png",
     "revision": "fdd390b44a4aeed763f53f4e8f6529e4"
   },
   {
-    "url": "vue3/images/sponsors/ionic.png",
+    "url": "images/sponsors/ionic.png",
     "revision": "05da967b8d61bbce5aa3ddc47c819bd5"
   },
   {
-    "url": "vue3/images/sponsors/isolutions_uk_limited.png",
+    "url": "images/sponsors/isolutions_uk_limited.png",
     "revision": "0f76512940c38b72fcf48337b4d64692"
   },
   {
-    "url": "vue3/images/sponsors/laravel.png",
+    "url": "images/sponsors/laravel.png",
     "revision": "1a01f23acfb4fb042dc4e5a3e5e663c8"
   },
   {
-    "url": "vue3/images/sponsors/moovweb.png",
+    "url": "images/sponsors/moovweb.png",
     "revision": "8183954731fdeb0f136fac1485198184"
   },
   {
-    "url": "vue3/images/sponsors/neds.png",
+    "url": "images/sponsors/neds.png",
     "revision": "1f1a2a46c2575019ae07a90205f60b65"
   },
   {
-    "url": "vue3/images/sponsors/onsen_ui.png",
+    "url": "images/sponsors/onsen_ui.png",
     "revision": "e41569bcb10fbca3f361d818b29ed7fd"
   },
   {
-    "url": "vue3/images/sponsors/passionate_people.png",
+    "url": "images/sponsors/passionate_people.png",
     "revision": "03e59e28347e1dcd165e4e1525afb545"
   },
   {
-    "url": "vue3/images/sponsors/qingfuwu.svg",
+    "url": "images/sponsors/qingfuwu.svg",
     "revision": "1da6cf95b68d8987369fdfa1c54fdf76"
   },
   {
-    "url": "vue3/images/sponsors/retool.png",
+    "url": "images/sponsors/retool.png",
     "revision": "aaad6a749deb625da5771750dcb51920"
   },
   {
-    "url": "vue3/images/sponsors/roadster.png",
+    "url": "images/sponsors/roadster.png",
     "revision": "080fb711e736d686f182358a582d7c6b"
   },
   {
-    "url": "vue3/images/sponsors/shopware_ag.png",
+    "url": "images/sponsors/shopware_ag.png",
     "revision": "e2ded483c0660bd629938e37f388d9fb"
   },
   {
-    "url": "vue3/images/sponsors/storyblok.svg",
+    "url": "images/sponsors/storyblok.svg",
     "revision": "aaf81a832b36546215746c5e50885474"
   },
   {
-    "url": "vue3/images/sponsors/tidelift.png",
+    "url": "images/sponsors/tidelift.png",
     "revision": "831935bd53d7d2d4eea9427c5f874816"
   },
   {
-    "url": "vue3/images/sponsors/usave.png",
+    "url": "images/sponsors/usave.png",
     "revision": "5cffd5053b1d75ae49c9b6eb176e0ccf"
   },
   {
-    "url": "vue3/images/sponsors/vehikl.png",
+    "url": "images/sponsors/vehikl.png",
     "revision": "3bd1b88aa9d242d308e838f2342d7660"
   },
   {
-    "url": "vue3/images/sponsors/vpnranks.png",
+    "url": "images/sponsors/vpnranks.png",
     "revision": "35d7392e773d487e13358d8b5f7fb646"
   },
   {
-    "url": "vue3/images/sponsors/vuejobs.png",
+    "url": "images/sponsors/vuejobs.png",
     "revision": "77ed618e17571d1a2d77ad7bc53e8fc4"
   },
   {
-    "url": "vue3/images/sponsors/vuemastery.png",
+    "url": "images/sponsors/vuemastery.png",
     "revision": "6f09ce143467fba22039bde3f2070c19"
   },
   {
-    "url": "vue3/images/sponsors/vueschool.png",
+    "url": "images/sponsors/vueschool.png",
     "revision": "3d92b4f1a8fcbe3be0d0e89950a1a705"
   },
   {
-    "url": "vue3/images/sponsors/y8.png",
+    "url": "images/sponsors/y8.png",
     "revision": "3cdd8826d3419751f40a8aa7f90cd539"
   },
   {
-    "url": "vue3/images/sponsors/youku.png",
+    "url": "images/sponsors/youku.png",
     "revision": "1cce2782971aed63d38b17e28614d512"
   },
   {
-    "url": "vue3/images/state.png",
+    "url": "images/state.png",
     "revision": "6a05b01942c7d2cff4ea0033ded59ebb"
   },
   {
-    "url": "vue3/images/transition.png",
+    "url": "images/transition.png",
     "revision": "5990c1dff7dc7a8fb3b34b4462bd0105"
   },
   {
-    "url": "vue3/images/transitions.svg",
+    "url": "images/transitions.svg",
     "revision": "66096c1a18d223228032d26a80737c5c"
   },
   {
-    "url": "vue3/images/v-bind-instead-of-sync.png",
+    "url": "images/v-bind-instead-of-sync.png",
     "revision": "cb59705b61fd5a75b1903f6a0b497cb1"
   },
   {

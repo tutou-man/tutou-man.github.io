@@ -3,7 +3,7 @@
   <title>Vue.js</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="./atom.xml" rel="self"/>
   
   <link href="https://cn.vuejs.org/"/>
   <updated>2021-12-06T09:14:15.000Z</updated>

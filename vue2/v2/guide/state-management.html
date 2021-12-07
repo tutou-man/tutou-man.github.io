@@ -1118,7 +1118,7 @@
     <span class="hljs-attr">sharedState</span>: store.state
   &#125;
 &#125;)</code></pre>
-<p><img src="/images/state.png" alt="状态管理"></p>
+<p><img src="/vue2/images/state.png" alt="状态管理"></p>
 <p class="tip">重要的是，注意你不应该在 action 中 替换原始的状态对象 - 组件和 store 需要引用同一个共享对象，变更才能够被观察到。</p>
 
 <p>接着我们继续延伸约定，组件不允许直接变更属于 store 实例的 state，而应执行 action 来分发 (dispatch) 事件通知 store 去改变，我们最终达成了 <a href="https://facebook.github.io/flux/" target="_blank" rel="noopener">Flux</a> 架构。这样约定的好处是，我们能够记录所有 store 中发生的 state 变更，同时实现能做到记录变更、保存状态快照、历史回滚/时光旅行的先进的调试工具。</p>

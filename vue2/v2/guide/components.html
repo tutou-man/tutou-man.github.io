@@ -1155,7 +1155,7 @@ new Vue({ el: '#components-demo3' })
 </script>
 
 <h2 id="组件的组织"><a href="#组件的组织" class="headerlink" title="组件的组织"></a>组件的组织</h2><p>通常一个应用会以一棵嵌套的组件树的形式来组织：</p>
-<p><img src="/images/components.png" alt="Component Tree"></p>
+<p><img src="/vue2/images/components.png" alt="Component Tree"></p>
 <p>例如，你可能会有页头、侧边栏、内容区等组件，每个组件又包含了其它的像导航链接、博文之类的组件。</p>
 <p>为了能在模板中使用，这些组件必须先注册以便 Vue 能够识别。这里有两种组件的注册类型：<strong>全局注册</strong>和<strong>局部注册</strong>。至此，我们的组件都只是通过 <code>Vue.component</code> 全局注册的：</p>
 <pre><code class="hljs js">Vue.component(<span class="hljs-string">'my-component-name'</span>, &#123;

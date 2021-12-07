@@ -1137,7 +1137,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 <p>当浏览器读到这些代码时，它会建立一个<a href="https://javascript.info/dom-nodes" target="_blank" rel="noopener">“DOM 节点”树</a>来保持追踪所有内容，如同你会画一张家谱树来追踪家庭成员的发展一样。</p>
 <p>上述 HTML 对应的 DOM 节点树如下图所示：</p>
-<p><img src="/images/dom-tree.png" alt="DOM 树可视化"></p>
+<p><img src="/vue2/images/dom-tree.png" alt="DOM 树可视化"></p>
 <p>每个元素都是一个节点。每段文字也是一个节点。甚至注释也都是节点。一个节点就是页面的一个部分。就像家谱树一样，每个节点都可以有孩子节点 (也就是说每个部分可以包含其它的一些部分)。</p>
 <p>高效地更新所有这些节点会是比较困难的，不过所幸你不必手动完成这个工作。你只需要告诉 Vue 你希望页面上的 HTML 是什么，这可以是在一个模板里：</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>&#123;&#123; blogTitle &#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>

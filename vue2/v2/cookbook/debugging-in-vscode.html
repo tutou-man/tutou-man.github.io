@@ -530,7 +530,7 @@
 <h3 id="从-VS-Code-启动应用"><a href="#从-VS-Code-启动应用" class="headerlink" title="从 VS Code 启动应用"></a>从 VS Code 启动应用</h3><p class="tip">我们这里假设端口号为 <code>8080</code>。如果与实际情况不符 (比如 <code>8080</code> 端口已经被占用且 Vue CLI 为你自动选取了另一个端口号)，可以修改相应的配置。</p>
 
 <p>点击在 Activity Bar 里的 Debugger 图标来到 Debug 视图，然后点击那个齿轮图标来配置一个 <code>launch.json</code> 的文件，选择 <strong>Chrome/Firefox：Launch</strong> 环境。然后将生成的 <code>launch.json</code> 的内容替换成为相应的配置：</p>
-<p><img src="/images/config_add.png" alt="添加 Chrome 配置"></p>
+<p><img src="/vue2/images/config_add.png" alt="添加 Chrome 配置"></p>
 <pre><code class="hljs json">&#123;
   <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.2.0"</span>,
   <span class="hljs-attr">"configurations"</span>: [
@@ -557,7 +557,7 @@
 &#125;</code></pre>
 <h2 id="设置一个断点"><a href="#设置一个断点" class="headerlink" title="设置一个断点"></a>设置一个断点</h2><ol>
 <li><p>在 <strong><code>src/components/HelloWorld.vue</code></strong> 的 <code>line90</code> 的地方设置一个断点，这里的 <code>data</code> 函数返回一个字符串。</p>
-<p><img src="/images/breakpoint_set.png" alt="断点渲染器"></p>
+<p><img src="/vue2/images/breakpoint_set.png" alt="断点渲染器"></p>
 </li>
 <li><p>在根目录打开你惯用的终端并使用 Vue CLI 开启这个应用：</p>
 <pre><code class="hljs undefined">npm run serve</code></pre>
@@ -565,11 +565,11 @@
 <li><p>来到 Debug 视图，选择<strong>“vuejs：chrome/firefox”</strong>配置，然后按 <kbd>F5</kbd> 或点击那个绿色的 play 按钮。</p>
 </li>
 <li><p>随着一个新的浏览器实例打开 <code>http://localhost:8080</code>，你的断点现在应该被命中了。</p>
-<p><img src="/images/breakpoint_hit.png" alt="命中断点"></p>
+<p><img src="/vue2/images/breakpoint_hit.png" alt="命中断点"></p>
 </li>
 </ol>
 <h2 id="替代方案"><a href="#替代方案" class="headerlink" title="替代方案"></a>替代方案</h2><h3 id="Vue-Devtools"><a href="#Vue-Devtools" class="headerlink" title="Vue Devtools"></a>Vue Devtools</h3><p>我们还有一些其它的调试方法，复杂度不尽相同。其中最流行和简单的是使用非常棒的 <a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd" target="_blank" rel="noopener">Chrome 版本</a>和 <a href="https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/" target="_blank" rel="noopener">Firefox 版本</a>的 Vue.js devtools。使用 devtools 有很多好处，比如它可以让你能够实时编辑数据 property 并立即看到其反映出来的变化。另一个主要的好处是能够为 Vuex 提供时间旅行式的调试体验。</p>
-<p><img src="/images/devtools-timetravel.gif" alt="Devtools Timetravel Debugger"></p>
+<p><img src="/vue2/images/devtools-timetravel.gif" alt="Devtools Timetravel Debugger"></p>
 <p class="tip">请留意如果页面使用了一个生产环境/压缩后的 Vue.js 构建版本 (例如来自一个 CDN 的标准的链接)，devtools 的审查功能是默认被禁用的，所以 Vue 面板不会出现。如果你切换到一个非压缩版本，你可能需要强制刷新该页面来看到它。</p>
 
 <h3 id="简单的-debugger-语句"><a href="#简单的-debugger-语句" class="headerlink" title="简单的 debugger 语句"></a>简单的 debugger 语句</h3><p>上述示例的工作流程非常好。不过这里还有一个替代选项，就是你可以直接在代码中使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/debugger" target="_blank" rel="noopener">原生的 <code>debugger</code> 语句</a>。如果你选择了这种方式，请千万记得当你调试完毕之后把这个语句移除。</p>

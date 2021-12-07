@@ -534,7 +534,7 @@ self.__precacheManifest = [
     "revision": "3df3d5383c947c2a69765ddd7ef3aab8"
   },
   {
-    "url": "assets/js/189.21a8c4f3.js",
+    "url": "vue3/assets/js/189.21a8c4f3.js",
     "revision": "19db166b17fbf0cd27336e9660831b93"
   },
   {
@@ -606,7 +606,7 @@ self.__precacheManifest = [
     "revision": "64825e48ff06084fc692b3b9948d8647"
   },
   {
-    "url": "assets/js/34.ef96058c.js",
+    "url": "vue3/assets/js/34.ef96058c.js",
     "revision": "c58db09c845e4d42cc1a3613c89c258a"
   },
   {

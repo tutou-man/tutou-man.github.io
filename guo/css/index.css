@@ -112,3 +112,25 @@ button[disabled],input[disabled]{cursor:default}
   .footer a{display: block;margin-left: 0;}
   .footer a img{vertical-align:baseline;}
 }
+.is750 .center{width: 96%;}
+.is750 .btn{width: 120px;height: 40px;border-radius: 20px;line-height: 40px;}
+.is750 .banner .logo{margin-top:20px;margin-bottom: 30px;height:30px;}
+.is750 .banner .logo img{width: auto;}
+.is750 .banner .title{font-size: 34px;}
+.is750 .banner .en{font-size: 18px;}
+.is750 .titleBox img{max-width: 100%;}
+.is750 .titleBox .title{font-size: 30px;}
+.is750 .serviceArea .areaList {flex-wrap: wrap;}
+.is750 .serviceArea .areaList .areaBox{width: 50%;margin-bottom: 30px;}
+.is750 .serviceArea .areaList .areaBox .p{font-size: 18px;line-height: 30px;}
+.is750 .swiper{width: calc(100% - 180px);margin:0 auto;margin-top: 90px;}
+.is750 .swiper-slide .box .fl{float: unset;width: 100%;height: auto;}
+.is750 .swiper-slide .box .fr{float: unset;width: 100%;height: auto;padding:30px;}
+.is750 .swiper-slide .box .fr .title{font-size: 30px;}
+.is750 .swiper-slide .box .fr .title img{height: 50px;width: auto;}
+.is750 .logoList .logoBox{width: calc((100% - 20px)/2);}
+.is750 .logoList .logoBox:nth-child(2n){margin-right: 0;}
+.is750 .footer{font-size: 20px;line-height: 40px;height: auto;padding:20px 0;}
+.is750 .footer span{display: block;}
+.is750 .footer a{display: block;margin-left: 0;}
+.is750 .footer a img{vertical-align:baseline;}

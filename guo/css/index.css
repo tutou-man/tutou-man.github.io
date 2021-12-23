@@ -75,50 +75,14 @@ button[disabled],input[disabled]{cursor:default}
 .footer a{margin-left:100px}
 .footer a:hover{text-decoration:underline}
 
-@media only screen and (max-width:1500px){
-    .center{width:calc(100% - 200px);}
-    .swiper-slide .box .fr{padding:30px 40px 0 40px}
-    .banner .logo{margin-bottom: 90px;}
-}
-@media only screen and (max-width:1360px){
-  .banner .logo{margin-bottom: 80px;}
-}
-@media only screen and (max-width:1024px){
-  .banner .logo{margin-bottom: 50px;}
-  .banner .title{font-size: 55px;}
-  .swiper-slide .box .fr{padding:20px 20px 0 20px}
-}
-@media only screen and (max-width:750px){
-  .center{width: 96%;}
-  .btn{width: 120px;height: 40px;border-radius: 20px;line-height: 40px;}
-  .banner .logo{margin-top:20px;margin-bottom: 30px;height:30px;}
-  .banner .logo img{width: auto;}
-  .banner .title{font-size: 34px;}
-  .banner .en{font-size: 18px;}
-  .titleBox img{max-width: 100%;}
-  .titleBox .title{font-size: 30px;}
-  .serviceArea .areaList {flex-wrap: wrap;}
-  .serviceArea .areaList .areaBox{width: 50%;margin-bottom: 30px;}
-  .serviceArea .areaList .areaBox .p{font-size: 18px;line-height: 30px;}
-  .swiper{width: calc(100% - 180px);margin:0 auto;margin-top: 90px;}
-  .swiper-slide .box .fl{float: unset;width: 100%;height: auto;}
-  .swiper-slide .box .fr{float: unset;width: 100%;height: auto;padding:30px;}
-  .swiper-slide .box .fr .title{font-size: 30px;}
-  .swiper-slide .box .fr .title img{height: 50px;width: auto;}
-  .logoList .logoBox{width: calc((100% - 20px)/2);}
-  .logoList .logoBox:nth-child(2n){margin-right: 0;}
-  .footer{font-size: 20px;line-height: 40px;height: auto;padding:20px 0;}
-  .footer span{display: block;}
-  .footer a{display: block;margin-left: 0;}
-  .footer a img{vertical-align:baseline;}
-}
+/* 自适应 */
 .is750 .center{width: 96%;}
 .is750 .btn{width: 120px;height: 40px;border-radius: 20px;line-height: 40px;}
 .is750 .banner .logo{margin-top:20px;margin-bottom: 30px;height:30px;}
 .is750 .banner .logo img{width: auto;}
 .is750 .banner .title{font-size: 34px;}
 .is750 .banner .en{font-size: 18px;}
-.is750 .titleBox img{max-width: 100%;}
+.is750 .titleBox img{height: 50px;width: auto;}
 .is750 .titleBox .title{font-size: 30px;}
 .is750 .serviceArea .areaList {flex-wrap: wrap;}
 .is750 .serviceArea .areaList .areaBox{width: 50%;margin-bottom: 30px;}
@@ -134,3 +98,17 @@ button[disabled],input[disabled]{cursor:default}
 .is750 .footer span{display: block;}
 .is750 .footer a{display: block;margin-left: 0;}
 .is750 .footer a img{vertical-align:baseline;}
+
+@media only screen and (max-width:1500px){
+  .center{width:calc(100% - 200px);}
+  .swiper-slide .box .fr{padding:30px 40px 0 40px}
+  .banner .logo{margin-bottom: 90px;}
+}
+@media only screen and (max-width:1360px){
+.banner .logo{margin-bottom: 80px;}
+}
+@media only screen and (max-width:1024px){
+.banner .logo{margin-bottom: 50px;}
+.banner .title{font-size: 55px;}
+.swiper-slide .box .fr{padding:20px 20px 0 20px}
+}

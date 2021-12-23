@@ -160,6 +160,7 @@
     pagination: '.swiper .pagination',
     paginationClickable: true,
     calculateHeight: true,
+    resizeReInit: true,
   })
   $('.swiper .left').click(function () {
     mySwiper.swipePrev();
@@ -167,8 +168,6 @@
   $('.swiper .right').click(function () {
     mySwiper.swipeNext();
   })
-</script>
-<script>
   var view_timer = null;
   function viewPort(userAgent, pageWidth) {
     var oView = document.getElementById('viewport');
@@ -228,7 +227,6 @@
         flag = true;
       }
     }
-    console.log(flag)
     if (flag || scale < 1) {
       $('body').addClass('is750')
     } else {

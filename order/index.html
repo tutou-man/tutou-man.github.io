@@ -116,26 +116,28 @@
   }
 </script>
 <script>
-  var timestamp = Date.parse(new Date())
+  var text = '',
+      timestamp = Date.parse(new Date()),
+      timeList = ['06:30~06:40','06:40~06:50','06:50~07:00','07:00~07:10','07:10~07:20'];
+  function add0(m) { return m < 10 ? '0' + m : m }
   function format(timestamp) {
     var time = new Date(timestamp);
-    var y = time.getFullYear();
-    var m = time.getMonth() + 1;
-    var d = time.getDate();
-    var w = time.getDay();
+    var y = time.getFullYear(),
+        m = time.getMonth() + 1,
+        d = time.getDate(),
+        w = time.getDay();
     if (w == 0 || w == 6) {
       return false
     }else{
       return add0(m) + '月' + add0(d) + '日';
     }
   }
-  function add0(m) { return m < 10 ? '0' + m : m }
-  var text = '';
-  var timeList = ['06:30~06:40','06:40~06:50','06:50~07:00','07:00~07:10','07:10~07:20']
   for (let i = 0; i < 8; i++) {
-    var times = timestamp - 86400000 * i;
-    if (format(times)) {
-      text += '<div class="box">昌平线-沙河站 <span>' + format(times) + '</span><span>('+timeList[Math.round(Math.random()*4)]+')</span></div>'
+    var timenum = timestamp - 86400000 * i,
+        daystr = format(timenum),
+        timestr = timeList[Math.round(Math.random()*4)];
+    if (daystr) {
+      text += '<div class="box">昌平线-沙河站 <span>' + daystr + '</span><span>('+ timestr +')</span></div>'
     }
   }
   $('.content .list').html(text)

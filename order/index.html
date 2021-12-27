@@ -235,11 +235,11 @@
   }
   function add0(m) { return m < 10 ? '0' + m : m }
   var text = '';
-  var timeList = ['07:00~07:10','06:30~06:40','07:10~07:20','06:50~07:00','07:10~07:20','06:50~07:00','06:40~06:50','07:00~07:10',]
+  var timeList = ['06:30~06:40','06:40~06:50','06:50~07:00','07:00~07:10','07:10~07:20']
   for (let i = 0; i < 8; i++) {
     var times = timestamp - 86400000 * i;
     if (format(times)) {
-      text += '<div class="box">昌平线-沙河站 <span>' + format(times) + '</span><span>('+timeList[i]+')</span></div>'
+      text += '<div class="box">昌平线-沙河站 <span>' + format(times) + '</span><span>('+timeList[Math.round(Math.random()*4)]+')</span></div>'
     }
   }
   $('.content .list').html(text)

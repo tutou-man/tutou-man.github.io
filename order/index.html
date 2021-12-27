@@ -7,25 +7,129 @@
   <meta name='renderer' content='webkit'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
   <title>预约记录</title>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <style>
   /*reset*/
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;background:#f7f7f7;}
-  img{border:0;vertical-align:top;image-rendering: -moz-crisp-edges;image-rendering: -o-crisp-edges;image-rendering: -webkit-optimize-contrast;image-rendering: crisp-edges;-ms-interpolation-mode: nearest-neighbor;-ms-interpolation-mode:bicubic}
-  .header{width: 100%;height: 80px;padding:0 46px;display: flex;justify-content: space-around;background: #fff}
-  .header .nav{position:relative;height: 100%;line-height: 80px;font-size:32px;color:#000;}
-  .header .nav.active{color:#1f8fff}
-  .header .nav img{position: absolute;bottom: 0;left:50%;transform: translateX(-50%);}
-  .content{padding:20px 46px 100px;}
-  .box{font-size: 28px;color:#0a1116;width: 100%;background: #fff;border-radius: 20px;line-height: 106px;padding:0 36px;margin-bottom: 20px;}
-  .box span{color:#1f8fff}
-  .more{text-align: center;font-size: 26px;color:#999;margin-top: 30px;}
-  .more img{vertical-align: middle;margin-left: 20px;}
-  .footer{position: fixed;bottom: 0;left:0;z-index: 10;width: 100%; height: 90px;border:2px solid #ddd;display: flex;justify-content: space-around;align-items: center;background: #fff;}
-  .footer .nav{text-align: center;color:#333;font-size: 22px;display: flex;flex-direction: column;justify-content: center;}
-  .footer .nav.active{color:#1f8fff}
-  .footer .nav img{height: 42px;width: auto;margin-bottom: 5px;display: block;margin:0 auto}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: #f7f7f7;
+  }
+
+  img {
+    border: 0;
+    vertical-align: top;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    -ms-interpolation-mode: bicubic
+  }
+
+  .header {
+    width: 100%;
+    height: 80px;
+    padding: 0 46px;
+    display: flex;
+    justify-content: space-around;
+    background: #fff
+  }
+
+  .header .nav {
+    position: relative;
+    height: 100%;
+    line-height: 80px;
+    font-size: 32px;
+    color: #000;
+  }
+
+  .header .nav.active {
+    color: #1f8fff
+  }
+
+  .header .nav img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .content {
+    padding: 20px 46px 100px;
+  }
+
+  .box {
+    font-size: 28px;
+    color: #0a1116;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    line-height: 106px;
+    padding: 0 36px;
+    margin-bottom: 20px;
+  }
+
+  .box span {
+    color: #1f8fff;
+    margin-right: 10px;
+  }
+
+  .more {
+    text-align: center;
+    font-size: 26px;
+    color: #999;
+    margin-top: 30px;
+  }
+
+  .more img {
+    vertical-align: middle;
+    margin-left: 20px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 90px;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+  }
+
+  .footer .nav {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer .nav.active {
+    color: #1f8fff
+  }
+
+  .footer .nav img {
+    height: 42px;
+    width: auto;
+    margin-bottom: 5px;
+    display: block;
+    margin: 0 auto
+  }
 </style>
 
 <body>
@@ -33,32 +137,39 @@
     <div class="nav">已预约</div>
     <div class="nav">已进站</div>
     <div class="nav">已取消</div>
-    <div class="nav active">已过期 <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAHADsDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMF/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIFAf/aAAwDAQACEAMQAAAA1d7BvxFnbiVRK4lWVomv/8QAJxAAAQEGAwkAAAAAAAAAAAAAAwABAgQSQeEzkpMQExQhQ1FhYmP/2gAIAQEAAT8AOKO46Ix8Z/rUmb5QhRkvNptS6E5Fdy6l0JyJ+mpdC3tWkzXQmP8AtmQpq7P/xAAZEQADAQEBAAAAAAAAAAAAAAAAAQMCEhD/2gAIAQIBAT8AlqXJ1EbmNzG8jeR+f//EABkRAQEBAQEBAAAAAAAAAAAAAAEAAgMQEf/aAAgBAwEBPwDR0+wdINwbgYGPP//Z" alt=""></div>
+    <div class="nav active">已过期 <img
+        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAHADsDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMF/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIFAf/aAAwDAQACEAMQAAAA1d7BvxFnbiVRK4lWVomv/8QAJxAAAQEGAwkAAAAAAAAAAAAAAwABAgQSQeEzkpMQExQhQ1FhYmP/2gAIAQEAAT8AOKO46Ix8Z/rUmb5QhRkvNptS6E5Fdy6l0JyJ+mpdC3tWkzXQmP8AtmQpq7P/xAAZEQADAQEBAAAAAAAAAAAAAAAAAQMCEhD/2gAIAQIBAT8AlqXJ1EbmNzG8jeR+f//EABkRAQEBAQEBAAAAAAAAAAAAAAEAAgMQEf/aAAgBAwEBPwDR0+wdINwbgYGPP//Z"
+        alt=""></div>
   </div>
   <div class="content">
-    <div class="box">昌平线-沙河站 <span>12月24日</span><span>(07:00~07:10)</span></div>
-    <div class="box">昌平线-沙河站 <span>12月23日</span><span>(07:00~07:10)</span></div>
-    <div class="box">昌平线-沙河站 <span>12月22日</span><span>(07:00~07:10)</span></div>
-    <div class="box">昌平线-沙河站 <span>12月16日</span><span>(07:00~07:10)</span></div>
-    <div class="box">昌平线-沙河站 <span>12月15日</span><span>(07:00~07:10)</span></div>
-    <div class="box">昌平线-沙河站 <span>12月14日</span><span>(07:00~07:10)</span></div>
-    <div class="more">查看更早记录<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAMAAAA4caRkAAAAflBMVEX29vb09PT5+fny8vL////8/Pz7+/uDg4Pq6uq3t7eAgIDm5uaurq6GhobFxcWJiYl+fn55eXnw8PCysrJ7e3vs7Ozj4+PLy8uwsLCqqqqNjY12dnZ1dXXc3NzR0dG9vb2ZmZmRkZGLi4vg4ODd3d3X19fT09PNzc2np6eUlJRLiYLnAAAA4UlEQVQY002PV44DQQhEoYDu6Z4cHGccN9//gsvYu5LfB6iehEoQwcxATCssMnAQGJOWh/FD8OfZRVFVW5Cel/56tsBPCy32udsp2ekW52tpYBZG0E1V9/GkROHzlqfDJoBITMsqz20DEAfdtV0eC/Wg2++8xJ2BCRS0qfucigDj1M3xCxBey0yb+xT3fpHqWDfwoocnw6Wd6iRN7OMFJCJMDkSHdJyOh3Zpq5LcPrRPsc14z11X70v8a2ICA2U69nHceoT7J75hRfqp3hDEoVeseBcIrW+/WCYEVQwDO55/AQbwCkiGefTOAAAAAElFTkSuQmCC" alt=""></div>
+    <div class="list"></div>
+    <div class="more">查看更早记录<img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAMAAAA4caRkAAAAflBMVEX29vb09PT5+fny8vL////8/Pz7+/uDg4Pq6uq3t7eAgIDm5uaurq6GhobFxcWJiYl+fn55eXnw8PCysrJ7e3vs7Ozj4+PLy8uwsLCqqqqNjY12dnZ1dXXc3NzR0dG9vb2ZmZmRkZGLi4vg4ODd3d3X19fT09PNzc2np6eUlJRLiYLnAAAA4UlEQVQY002PV44DQQhEoYDu6Z4cHGccN9//gsvYu5LfB6iehEoQwcxATCssMnAQGJOWh/FD8OfZRVFVW5Cel/56tsBPCy32udsp2ekW52tpYBZG0E1V9/GkROHzlqfDJoBITMsqz20DEAfdtV0eC/Wg2++8xJ2BCRS0qfucigDj1M3xCxBey0yb+xT3fpHqWDfwoocnw6Wd6iRN7OMFJCJMDkSHdJyOh3Zpq5LcPrRPsc14z11X70v8a2ICA2U69nHceoT7J75hRfqp3hDEoVeseBcIrW+/WCYEVQwDO55/AQbwCkiGefTOAAAAAElFTkSuQmCC"
+        alt=""></div>
   </div>
   <div class="footer">
     <div class="nav">
-      <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAqACsDAREAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABgABAgQFAwf/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADeKIhHM9UBs2CyIFQvBs6GcFYMBaDZbKhbMsLQbMwc6kAyJDCJDCP/xAA2EAABAwICBQkGBwAAAAAAAAABAgMEAAUGIRASIjE2BxMUFRZWgpSyETRUcnOTIyRBUVJTo//aAAgBAQABPwC/3iX2mlxpt5lWhhr3cMMlfO11tH783Pyiq62jd+bn5ZVdbRu/Nz8sqnr49GShdrxVOuErXGpHcYIDlMa7jDa3E6i1JBUn9jXKFwZNX8vqq3xmTbI34DZPMo9uwP4iuiMfDN/bFdGY/oZ+2Kww0jtjiXYTsuo1azrlC4LneD1VcbRDu1mgCbNeihttJSW3Q3mU0zhKzMPtui+StghWc0U1LjPr1Gn2XF7/AGIWCawxxnif6qNHKFwVN8Hqp6xW++2eAi5Mc6Gm0lGZyJTXYDDvwH+qqtmErPZ5olQonNvAEBWuawxxjif6qNGP+DJ3g9VMYovRhMvwLC65BYQkOKcyWsAb00vHcuT+ZttqeetrPvLq8leGu2F1nHpdpsrj9vRvUvJbny1giX1jf7/MDTjaXlo2V5KToKUr2VAKB/Q1uTQQlI1UpABO4CglKEhKQAAMgKCEpJUlIBJzIG/R/8QAFBEBAAAAAAAAAAAAAAAAAAAAUP/aAAgBAgEBPwAT/8QAFBEBAAAAAAAAAAAAAAAAAAAAUP/aAAgBAwEBPwAT/9k=" alt="">
+      <img
+        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAqACsDAREAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABgABAgQFAwf/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADeKIhHM9UBs2CyIFQvBs6GcFYMBaDZbKhbMsLQbMwc6kAyJDCJDCP/xAA2EAABAwICBQkGBwAAAAAAAAABAgMEAAUGIRASIjE2BxMUFRZWgpSyETRUcnOTIyRBUVJTo//aAAgBAQABPwC/3iX2mlxpt5lWhhr3cMMlfO11tH783Pyiq62jd+bn5ZVdbRu/Nz8sqnr49GShdrxVOuErXGpHcYIDlMa7jDa3E6i1JBUn9jXKFwZNX8vqq3xmTbI34DZPMo9uwP4iuiMfDN/bFdGY/oZ+2Kww0jtjiXYTsuo1azrlC4LneD1VcbRDu1mgCbNeihttJSW3Q3mU0zhKzMPtui+StghWc0U1LjPr1Gn2XF7/AGIWCawxxnif6qNHKFwVN8Hqp6xW++2eAi5Mc6Gm0lGZyJTXYDDvwH+qqtmErPZ5olQonNvAEBWuawxxjif6qNGP+DJ3g9VMYovRhMvwLC65BYQkOKcyWsAb00vHcuT+ZttqeetrPvLq8leGu2F1nHpdpsrj9vRvUvJbny1giX1jf7/MDTjaXlo2V5KToKUr2VAKB/Q1uTQQlI1UpABO4CglKEhKQAAMgKCEpJUlIBJzIG/R/8QAFBEBAAAAAAAAAAAAAAAAAAAAUP/aAAgBAgEBPwAT/8QAFBEBAAAAAAAAAAAAAAAAAAAAUP/aAAgBAwEBPwAT/9k="
+        alt="">
       <div>预约</div>
     </div>
     <div class="nav">
-      <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAqACcDAREAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABAYDBQABAgf/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAB8Bw0DCSAYjz49IFYkKIdBcLQqy1NAR0REZegR0MRoww2f/8QALhAAAQQCAAMGBAcAAAAAAAAAAwECBAUABhESIQc3QVJidBMgNrIxU3N1k7Gz/9oACAEBAAE/ALfYbNLxaijhhPJEJClcZ3K3CWe5xhPMaqruRiK53AuG2wLNOZeoBVR6Jyi9arwxk/dSMR7Kqt/mykv557ctRcwwgmtGhWfCfxYrchd6Fn7JmWfSpmqv5D/tXD9zcT9Rv+mA6gEqeRP6xveu79vzaKmiOcUm1nLAkqnI0rDcjntxKjUn8GLsp3+lZOPpoB6VK34TVhKxEa1F8MjaPUzAqSHb2BBIqs4jk9EVM1qkqYCEl1p3y3k4jfIITnXp4ccWBHs+0qeKcJpxCgsVjCfg3LLWqVtXLeytio9AvVFRieXNEer9OgK/yO+7Ozz6ak+8NnZz9LP92XLUFpU7WW4r69Z45AGhcxjuDmcMk3+xSoxgJq5xqVis5lMnjmsVhKbXocI6pziYvNmk10utoTAmiURXySvRvpVc0eulVdAoJglEVTkf83//xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAECAQE/AHf/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAEDAQE/AHf/2Q==" alt="">
+      <img
+        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAqACcDAREAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAABAYDBQABAgf/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAB8Bw0DCSAYjz49IFYkKIdBcLQqy1NAR0REZegR0MRoww2f/8QALhAAAQQCAAMGBAcAAAAAAAAAAwECBAUABhESIQc3QVJidBMgNrIxU3N1k7Gz/9oACAEBAAE/ALfYbNLxaijhhPJEJClcZ3K3CWe5xhPMaqruRiK53AuG2wLNOZeoBVR6Jyi9arwxk/dSMR7Kqt/mykv557ctRcwwgmtGhWfCfxYrchd6Fn7JmWfSpmqv5D/tXD9zcT9Rv+mA6gEqeRP6xveu79vzaKmiOcUm1nLAkqnI0rDcjntxKjUn8GLsp3+lZOPpoB6VK34TVhKxEa1F8MjaPUzAqSHb2BBIqs4jk9EVM1qkqYCEl1p3y3k4jfIITnXp4ccWBHs+0qeKcJpxCgsVjCfg3LLWqVtXLeytio9AvVFRieXNEer9OgK/yO+7Ozz6ak+8NnZz9LP92XLUFpU7WW4r69Z45AGhcxjuDmcMk3+xSoxgJq5xqVis5lMnjmsVhKbXocI6pziYvNmk10utoTAmiURXySvRvpVc0eulVdAoJglEVTkf83//xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAECAQE/AHf/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAEDAQE/AHf/2Q=="
+        alt="">
       <div>进站码</div>
     </div>
     <div class="nav active">
-      <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAqACIDAREAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAABQcAAgMEBv/EABoBAAIDAQEAAAAAAAAAAAAAAAQGAgMFAQD/2gAMAwEAAhADEAAAAPQbGMFMFnudFUmrgMCqYMHeuQ8mrksqdSo0KliX96+29IEWI6VVoVTMuhCRdoTJUWtdYZFcyr4E0UmLcWEMY2Rq4xjLqp7mg5drOf/EADIQAAECBAIGCAcBAAAAAAAAAAIBAwAEBREGEhAUITFxkhMVMzZRUlWyFiIjRVZhcrH/2gAIAQEAAT8AxZX6g3WnJWWmDYaZt2cdfVf1Oa546+q/qM1zxIYkqjFQZI5x50M6IQOLdFRV0Yu70znEfbAUGjfkTXJFUkJKS6PUqgE5mvmypbLaGe3a/sf9SEjF3emc4j7YDB7pghdaSHPHwa6P3Sm88AGSdAM11B1Eum7YWjF3emc4j7YyB5RiUkXZ19GZZrMa7kT9QzQJ8X2vkZWxjudHxi6RjNk2MSPuOjkF2ygSxnDzDFDVFmZuxbdTd3RhLC2vq1PTgZJYLE34mujowcFEMBLil41Zmy/Rb5UhphoVVRbBOApFkHYmxETR/8QAJhEAAQMDAgYDAQAAAAAAAAAAAQACAwQREhAhBRMxMlFSFCIjQf/aAAgBAgEBPwCkpGPjuQhRQeqNHB4UtHFgbaUI/DZfIma7sUE0kl8m2UvYUVRWbANkayxP0Q4gfVPOcd0eqoL8kLzspMGC5CfVNLSEeq4e9vLssmhVJ2Cq6tmODBpA4hvVZu8pzif6nd2n/8QAJBEAAgEDAwMFAAAAAAAAAAAAAAECAwQREiExFCJCEBMyM0H/2gAIAQMBAT8Au7rFTCZ1VX8kdVVRTu56hcF3HNbdioUmt5FanCL2ZBpSFwXXdWe5G11eQ7Nx8hdsyPBefc9jUyCk3yU6UnMXBeRfvM0vBb8stLaWXKTMFZLWaVjgpRWSHx9P/9k=" alt="">
+      <img
+        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAqACIDAREAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAABQcAAgMEBv/EABoBAAIDAQEAAAAAAAAAAAAAAAQGAgMFAQD/2gAMAwEAAhADEAAAAPQbGMFMFnudFUmrgMCqYMHeuQ8mrksqdSo0KliX96+29IEWI6VVoVTMuhCRdoTJUWtdYZFcyr4E0UmLcWEMY2Rq4xjLqp7mg5drOf/EADIQAAECBAIGCAcBAAAAAAAAAAIBAwAEBREGEhAUITFxkhMVMzZRUlWyFiIjRVZhcrH/2gAIAQEAAT8AxZX6g3WnJWWmDYaZt2cdfVf1Oa546+q/qM1zxIYkqjFQZI5x50M6IQOLdFRV0Yu70znEfbAUGjfkTXJFUkJKS6PUqgE5mvmypbLaGe3a/sf9SEjF3emc4j7YDB7pghdaSHPHwa6P3Sm88AGSdAM11B1Eum7YWjF3emc4j7YyB5RiUkXZ19GZZrMa7kT9QzQJ8X2vkZWxjudHxi6RjNk2MSPuOjkF2ygSxnDzDFDVFmZuxbdTd3RhLC2vq1PTgZJYLE34mujowcFEMBLil41Zmy/Rb5UhphoVVRbBOApFkHYmxETR/8QAJhEAAQMDAgYDAQAAAAAAAAAAAQACAwQREhAhBRMxMlFSFCIjQf/aAAgBAgEBPwCkpGPjuQhRQeqNHB4UtHFgbaUI/DZfIma7sUE0kl8m2UvYUVRWbANkayxP0Q4gfVPOcd0eqoL8kLzspMGC5CfVNLSEeq4e9vLssmhVJ2Cq6tmODBpA4hvVZu8pzif6nd2n/8QAJBEAAgEDAwMFAAAAAAAAAAAAAAECAwQREiExFCJCEBMyM0H/2gAIAQMBAT8Au7rFTCZ1VX8kdVVRTu56hcF3HNbdioUmt5FanCL2ZBpSFwXXdWe5G11eQ7Nx8hdsyPBefc9jUyCk3yU6UnMXBeRfvM0vBb8stLaWXKTMFZLWaVjgpRWSHx9P/9k="
+        alt="">
       <div>预约记录</div>
     </div>
     <div class="nav">
-      <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAqACoDAREAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAABgABAgQFB//EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAPYzjnGN8QlkCItCYsLKCYkC4wIaYVEoVFRvg4ZGRQLGxiWQhRD/xAAuEAABAwIEBAILAAAAAAAAAAACAQMEBQYAERIxEBMhQSAiBxQVJCUzUlNhcXP/2gAIAQEAAT8Axctc9hU3mgHNkumjbDX1nhqgXPKBJEm4Tjv/AGGx8mLWrkiesqn1MdFShrk52Qx7F4LrVDui3o+585T04XDBoHpQkoW7sNNPgviO7G9Rrkb5sBzz/wA1xHmx5kIJjLoqwQa0Ptli2/jl0z67uw17tF41GqwqW1zJ8ltgF21l1XFTup24YjtOt6DIfV9NCyTTS2CYptJagUFml7gDKtF+c98UyqyLLZKm1SDIOGBryZTKZjoxS69Tq0KrT5QOqnUg2JP2nCnwmbivSrSZrXOZgKjDIHshYABaBAARAU7IOScFHUOS9UXsuLwgM0V+DXIDQsOtPiLyt7GC4TJUwgiPUURFXquXfwKImRCSISdOi8P/xAAUEQEAAAAAAAAAAAAAAAAAAABQ/9oACAECAQE/ABP/xAAUEQEAAAAAAAAAAAAAAAAAAABQ/9oACAEDAQE/ABP/2Q==" alt="">
+      <img
+        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAqACoDAREAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAABgABAgQFB//EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAPYzjnGN8QlkCItCYsLKCYkC4wIaYVEoVFRvg4ZGRQLGxiWQhRD/xAAuEAABAwIEBAILAAAAAAAAAAACAQMEBQYAERIxEBMhQSAiBxQVJCUzUlNhcXP/2gAIAQEAAT8Axctc9hU3mgHNkumjbDX1nhqgXPKBJEm4Tjv/AGGx8mLWrkiesqn1MdFShrk52Qx7F4LrVDui3o+585T04XDBoHpQkoW7sNNPgviO7G9Rrkb5sBzz/wA1xHmx5kIJjLoqwQa0Ptli2/jl0z67uw17tF41GqwqW1zJ8ltgF21l1XFTup24YjtOt6DIfV9NCyTTS2CYptJagUFml7gDKtF+c98UyqyLLZKm1SDIOGBryZTKZjoxS69Tq0KrT5QOqnUg2JP2nCnwmbivSrSZrXOZgKjDIHshYABaBAARAU7IOScFHUOS9UXsuLwgM0V+DXIDQsOtPiLyt7GC4TJUwgiPUURFXquXfwKImRCSISdOi8P/xAAUEQEAAAAAAAAAAAAAAAAAAABQ/9oACAECAQE/ABP/xAAUEQEAAAAAAAAAAAAAAAAAAABQ/9oACAEDAQE/ABP/2Q=="
+        alt="">
       <div>我的</div>
     </div>
   </div>
@@ -108,6 +219,29 @@
       viewPort(navigator.userAgent);
     }, 500);
   }
+</script>
+<script>
+  var timestamp = Date.parse(new Date())
+  function format(timestamp) {
+    var time = new Date(timestamp);
+    var y = time.getFullYear();
+    var m = time.getMonth() + 1;
+    var d = time.getDate();
+    var w = time.getDay();
+    if (w == 0 || w == 6) {
+      return false
+    }
+    return add0(m) + '月' + add0(d) + '日';
+  }
+  function add0(m) { return m < 10 ? '0' + m : m }
+  var text = '';
+  for (let i = 0; i < 8; i++) {
+    var times = timestamp - 86400000 * i;
+    if (format(times)) {
+      text += '<div class="box">昌平线-沙河站 <span>' + format(times) + '</span><span>(07:00~07:10)</span></div>'
+    }
+  }
+  $('.content .list').html(text)
 </script>
 
 </html>

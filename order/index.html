@@ -125,8 +125,9 @@
     var w = time.getDay();
     if (w == 0 || w == 6) {
       return false
+    }else{
+      return add0(m) + '月' + add0(d) + '日';
     }
-    return add0(m) + '月' + add0(d) + '日';
   }
   function add0(m) { return m < 10 ? '0' + m : m }
   var text = '';

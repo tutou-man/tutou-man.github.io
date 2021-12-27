@@ -7,7 +7,6 @@
   <meta name='renderer' content='webkit'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
   <title>预约记录</title>
-  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
@@ -140,7 +139,7 @@
       text += '<div class="box">昌平线-沙河站 <span>' + daystr + '</span><span>('+ timestr +')</span></div>'
     }
   }
-  $('.content .list').html(text)
+  document.querySelector('.list').innerHTML = text
 </script>
 
 </html>

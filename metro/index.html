@@ -115,6 +115,34 @@
     }, 500);
   }
 </script>
+<!-- 假期预约修正 -->
+<script>
+  // 2022节假日排除
+  var holiday = ['1-1','1-2','1-3','1-31','2-1','2-2','2-3','2-4','2-5','2-6','4-3','4-4','4-5','4-30','5-1','5-2','5-3','5-4','6-3','6-4','6-5','9-10','9-11','9-12','10-1','10-2','10-3','10-4','10-5','10-6','10-7'];
+  // 2022调休补齐
+  var workday = ['1-29','1-30','4-2','4-24','5-7','10-8','10-9'];
+
+  function isHoliday(m,d){
+    var isholi = false;
+    holiday.map(function(item,index){
+      var holi = item.split('-')
+      if(m == holi[0] && d == holi[1]){
+          isholi = true
+        }
+    })
+    return isholi
+  }
+  function isWorkday(m,d){
+    var iswork = false;
+    workday.map(function(item,index){
+      var work = item.split('-')
+      if(m == work[0] && d == work[1]){
+          iswork = true
+        }
+    })
+    return iswork
+  }
+</script>
 <script>
   var text = '',
       timestamp = Date.parse(new Date()),
@@ -126,12 +154,14 @@
         m = time.getMonth() + 1,
         d = time.getDate(),
         w = time.getDay();
-    if (w == 0 || w == 6) {
-      return false
-    }else{
-      return add0(m) + '月' + add0(d) + '日';
+    if(!isWorkday(m,d)){
+      if (w == 0 || w == 6 || isHoliday(m,d)) {
+        return false
+      }
     }
+    return add0(m) + '月' + add0(d) + '日';
   }
+  
   for (let i = 0; i < 8; i++) {
     var timenum = timestamp - 86400000 * i,
         daystr = format(timenum),
@@ -140,7 +170,7 @@
       text += '<div class="box">昌平线-沙河站 <span>' + daystr + '</span><span>('+ timestr +')</span></div>'
     }
   }
-  document.querySelector('.list').innerHTML = text
+  document.querySelector('.list').innerHTML = text;
 </script>
 
 </html>

@@ -70,6 +70,7 @@
     </div>
   </div>
 </body>
+<!-- 页面宽度750 -->
 <script>
   var view_timer = null;
   function viewPort(userAgent, pageWidth) {
@@ -143,6 +144,7 @@
     return iswork
   }
 </script>
+<!-- 数据拼接 -->
 <script>
   var text = '',
       timestamp = Date.parse(new Date()),
@@ -161,7 +163,7 @@
     }
     return add0(m) + '月' + add0(d) + '日';
   }
-  
+
   for (let i = 0; i < 8; i++) {
     var timenum = timestamp - 86400000 * i,
         daystr = format(timenum),

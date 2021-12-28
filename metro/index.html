@@ -16,12 +16,21 @@
   .header{width:100%;height:80px;padding:0 46px;display:flex;justify-content:space-around;background:#fff}
   .header .nav{position:relative;height:100%;line-height:80px;font-size:32px;color:#000}
   .header .nav.active{color:#1f8fff}
+  .header .nav.active::before{display: block;content:'';height:7px;width: 60px;position: absolute;bottom: 0;left:50%;transform: translateX(-50%);background-repeat: no-repeat;background-position: center center; background-image: url('data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAHADsDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMF/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIFAf/aAAwDAQACEAMQAAAA1d7BvxFnbiVRK4lWVomv/8QAJxAAAQEGAwkAAAAAAAAAAAAAAwABAgQSQeEzkpMQExQhQ1FhYmP/2gAIAQEAAT8AOKO46Ix8Z/rUmb5QhRkvNptS6E5Fdy6l0JyJ+mpdC3tWkzXQmP8AtmQpq7P/xAAZEQADAQEBAAAAAAAAAAAAAAAAAQMCEhD/2gAIAQIBAT8AlqXJ1EbmNzG8jeR+f//EABkRAQEBAQEBAAAAAAAAAAAAAAEAAgMQEf/aAAgBAwEBPwDR0+wdINwbgYGPP//Z');}
   .header .nav img{position:absolute;bottom:0;left:50%;transform:translateX(-50%)}
-  .content{padding:20px 46px 100px}
+  .content{padding:20px 46px 100px;}
+  .navbox{display: none;}
+  .navbox.active{display: block;}
+  .nodata{min-height:calc(100vh - 250px); display:flex;flex-direction: column;justify-content: center;align-items: center;font-size:26px;color:#999;}
+  .nodata img{margin-bottom: 20px;}
+  .tips{position: fixed;top:80px;left:0;right:0;width: 100%;height:80px;padding:0 46px;line-height: 80px;font-size:26px;display: flex;align-items: center;background: #f5e9cf;}
+  .tips img{margin-right: 10px;width:30px;height: 30px;}
+  .tips div{display: flex;}
+  .tips span{font-size: 32px;color:#f8730a;font-weight: bold;margin:0 5px;}
   .box{font-size:28px;color:#0a1116;width:100%;background:#fff;border-radius:20px;line-height:106px;padding:0 36px;margin-bottom:20px}
   .box span{color:#1f8fff;margin-right:10px}
-  .more{text-align:center;font-size:26px;color:#999;margin-top:30px}
-  .more img{vertical-align:middle;margin-left:20px}
+  .more{text-align:center;font-size:26px;color:#999;margin-top:30px;position: relative;}
+  .more::before{content:'';display: block;width: 23px;height: 15px;position: absolute;right:50%;top:38%;transform: translate(120px);background-repeat: no-repeat;background-position: center center; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAMAAAA4caRkAAAAflBMVEX29vb09PT5+fny8vL////8/Pz7+/uDg4Pq6uq3t7eAgIDm5uaurq6GhobFxcWJiYl+fn55eXnw8PCysrJ7e3vs7Ozj4+PLy8uwsLCqqqqNjY12dnZ1dXXc3NzR0dG9vb2ZmZmRkZGLi4vg4ODd3d3X19fT09PNzc2np6eUlJRLiYLnAAAA4UlEQVQY002PV44DQQhEoYDu6Z4cHGccN9//gsvYu5LfB6iehEoQwcxATCssMnAQGJOWh/FD8OfZRVFVW5Cel/56tsBPCy32udsp2ekW52tpYBZG0E1V9/GkROHzlqfDJoBITMsqz20DEAfdtV0eC/Wg2++8xJ2BCRS0qfucigDj1M3xCxBey0yb+xT3fpHqWDfwoocnw6Wd6iRN7OMFJCJMDkSHdJyOh3Zpq5LcPrRPsc14z11X70v8a2ICA2U69nHceoT7J75hRfqp3hDEoVeseBcIrW+/WCYEVQwDO55/AQbwCkiGefTOAAAAAElFTkSuQmCC');}
   .footer{position:fixed;bottom:0;left:0;z-index:10;width:100%;height:90px;border:2px solid #ddd;display:flex;justify-content:space-around;align-items:center;background:#fff}
   .footer .nav{text-align:center;color:#333;font-size:20px;display:flex;flex-direction:column;justify-content:center}
   .footer .nav.active{color:#1f8fff}
@@ -33,15 +42,37 @@
     <div class="nav">已预约</div>
     <div class="nav">已进站</div>
     <div class="nav">已取消</div>
-    <div class="nav active">已过期 <img
-        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wgARCAAHADsDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMF/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIFAf/aAAwDAQACEAMQAAAA1d7BvxFnbiVRK4lWVomv/8QAJxAAAQEGAwkAAAAAAAAAAAAAAwABAgQSQeEzkpMQExQhQ1FhYmP/2gAIAQEAAT8AOKO46Ix8Z/rUmb5QhRkvNptS6E5Fdy6l0JyJ+mpdC3tWkzXQmP8AtmQpq7P/xAAZEQADAQEBAAAAAAAAAAAAAAAAAQMCEhD/2gAIAQIBAT8AlqXJ1EbmNzG8jeR+f//EABkRAQEBAQEBAAAAAAAAAAAAAAEAAgMQEf/aAAgBAwEBPwDR0+wdINwbgYGPP//Z"
-        alt=""></div>
+    <div class="nav active">已过期</div>
   </div>
   <div class="content">
-    <div class="list"></div>
-    <div class="more">查看更早记录<img
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAMAAAA4caRkAAAAflBMVEX29vb09PT5+fny8vL////8/Pz7+/uDg4Pq6uq3t7eAgIDm5uaurq6GhobFxcWJiYl+fn55eXnw8PCysrJ7e3vs7Ozj4+PLy8uwsLCqqqqNjY12dnZ1dXXc3NzR0dG9vb2ZmZmRkZGLi4vg4ODd3d3X19fT09PNzc2np6eUlJRLiYLnAAAA4UlEQVQY002PV44DQQhEoYDu6Z4cHGccN9//gsvYu5LfB6iehEoQwcxATCssMnAQGJOWh/FD8OfZRVFVW5Cel/56tsBPCy32udsp2ekW52tpYBZG0E1V9/GkROHzlqfDJoBITMsqz20DEAfdtV0eC/Wg2++8xJ2BCRS0qfucigDj1M3xCxBey0yb+xT3fpHqWDfwoocnw6Wd6iRN7OMFJCJMDkSHdJyOh3Zpq5LcPrRPsc14z11X70v8a2ICA2U69nHceoT7J75hRfqp3hDEoVeseBcIrW+/WCYEVQwDO55/AQbwCkiGefTOAAAAAElFTkSuQmCC"
-        alt=""></div>
+    <div class="navbox">
+      <div class="tips">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAeFBMVEUAAADlfyjmginjfyjmgCjmginmgSfmgSnmgSnngSnmgSjmgSjlgCfmgSnmgSnmgSjmgSjngCnmgCjngSrkfyrlgivngiXmgSnmgSnmgSjmginnginngSjmgSjmginjfivlhiiqVQDngSnmginngirmfyfqfyrmgSkKtYUiAAAAJ3RSTlMAgL9AsWE62M/Ip5MT7LejnImEVTAdDe/DjnVqTkYoIwkDvHBWNBhmusm1AAAA4klEQVQ4y7WT2W7CQAxFPdlXEhJCgZat2/n/PyzqkDgTkUg8cJ4s+cga2XfkWaLgsNS+NOCJYib97wRH2OMYpwocoSY5i3IoIYiMChW7X20fPYhDkUG4BKy2/9VH7t0A1oWoUHySXW0fSxCJqNCl1GJJ4S0z5jZ9JJwScrkD3qavdYJpRIV3mQgu4L9C8AfmBO54c4LpedEjlcVFLa+6DaUnfnSsFr56oX147mNJMwxNAKaB+YnJZUS3ZxK5c0omY/wAN7TFyoZSCUs39teKtHOM7doKAzlGXDa7ma+nhNTyHH+w0RrC/NmCTQAAAABJRU5ErkJggg==" alt="">
+        <div>请务必在预约时间段前后 <span>10分钟</span>内进站。</div>
+      </div>
+      <div class="nodata">
+        <img src="img.jpg" alt="">
+        <div>暂无数据</div>
+      </div>
+    </div>
+    <div class="navbox">
+      <div class="nodata">
+        <img src="img.jpg" alt="">
+        <div>近两周没有记录</div>
+        <div class="more">查看更早记录</div>
+      </div>
+    </div>
+    <div class="navbox">
+      <div class="nodata">
+        <img src="img.jpg" alt="">
+        <div>近两周没有记录</div>
+        <div class="more">查看更早记录</div>
+      </div>
+    </div>
+    <div class="navbox active">
+      <div class="list"></div>
+      <div class="more">查看更早记录</div>
+    </div>
   </div>
   <div class="footer">
     <div class="nav">
@@ -174,5 +205,21 @@
   }
   document.querySelector('.list').innerHTML = text;
 </script>
-
+<!-- 顶部导航 -->
+<script>
+  var nav = document.querySelectorAll('.header .nav');
+	var content = document.querySelectorAll('.content .navbox');
+	for(var i=0;i<nav.length;i++){
+		(function(n){
+			nav[n].onclick = function () {
+				for (var j = 0; j < nav.length; j++) {
+					nav[j].className = "nav";
+					content[j].className = "navbox";
+				}
+				this.className = "nav active";
+				content[n].className = "navbox active";
+			}
+		}(i))
+}
+</script>
 </html>

@@ -172,7 +172,7 @@
   var text = '',
       timestamp = Date.parse(new Date()),
       timeList = ['06:30~06:40','06:40~06:50','06:50~07:00','07:00~07:10','07:10~07:20'];
-  function add0(m) { return m < 10 ? '0' + m : m }
+  // function add0(m) { return m < 10 ? '0' + m : m }
   function format(timestamp) {
     var time = new Date(timestamp);
     var y = time.getFullYear(),
@@ -184,7 +184,7 @@
         return false
       }
     }
-    return add0(m) + '月' + add0(d) + '日';
+    return m + '月' + d + '日';
   }
 
   for (let i = 0; i < 8; i++) {

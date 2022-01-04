@@ -146,25 +146,15 @@
   // 2022调休补齐
   var workday = ['1-29','1-30','4-2','4-24','5-7','10-8','10-9'];
 
-  function isHoliday(m,d){
-    var isholi = false;
-    holiday.map(function(item,index){
-      var holi = item.split('-')
-      if(m == holi[0] && d == holi[1]){
-        isholi = true
+  function isDay(m,d,dayList){
+    var istrue = false;
+    dayList.map(function(item,index){
+      var dayL = item.split('-')
+      if(m == dayL[0] && d == dayL[1]){
+        istrue = true
       }
     })
-    return isholi
-  }
-  function isWorkday(m,d){
-    var iswork = false;
-    workday.map(function(item,index){
-      var work = item.split('-')
-      if(m == work[0] && d == work[1]){
-        iswork = true
-      }
-    })
-    return iswork
+    return istrue
   }
 </script>
 <!-- 数据拼接 -->
@@ -179,8 +169,8 @@
         m = time.getMonth() + 1,
         d = time.getDate(),
         w = time.getDay();
-    if(!isWorkday(m,d)){
-      if (w == 0 || w == 6 || isHoliday(m,d)) {
+    if(!isDay(m,d,workday)){
+      if (w == 0 || w == 6 || isDay(m,d,holiday)) {
         return false
       }
     }
@@ -188,9 +178,9 @@
   }
 
   for (let i = 0; i < 8; i++) {
-    var timenum = timestamp - 86400000 * i,
-        daystr = format(timenum),
-        timestr = timeList[Math.round(Math.random()*4)];
+    var timenum = timestamp - 86400000 * i,//时间戳
+        daystr = format(timenum),//日期格式化
+        timestr = timeList[parseInt(Math.random()*5)];// 随机时间段
     if (daystr) {
       text += '<div class="box">昌平线-沙河站 <span>' + daystr + '</span><span>('+ timestr +')</span></div>'
     }

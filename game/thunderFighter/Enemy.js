@@ -1,10 +1,3 @@
-//
-// all enemies in the game are instantiated in this type 
-//
-// @open license with citation
-// @please feel free to reuse this code for any purpose, citing dougx.net
-// @see http://dougx.net/plunder/license.txt for MIT open license text
-
 
 
 function Enemy(id, x, y, velx, vely)

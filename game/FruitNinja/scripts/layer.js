@@ -2,8 +2,8 @@
  * layer manager
  */
 
-var Raphael = require( "lib/raphael" );
-var Ucren = require( "lib/ucren" );
+var Raphael = require("lib/raphael");
+var Ucren = require("lib/ucren");
 
 var layers = {};
 var zindexs = {
@@ -16,15 +16,15 @@ var zindexs = {
 	"mask": zi()
 };
 
-exports.createImage = function( layer, src, x, y, w, h ){
-	layer = this.getLayer( layer );
-    return layer.image( src, x, y, w, h );
+exports.createImage = function (layer, src, x, y, w, h) {
+	layer = this.getLayer(layer);
+	return layer.image(src, x, y, w, h);
 };
 
-exports.createText = function( layer, text, x, y, fill, size ){
-	layer = this.getLayer( layer );
+exports.createText = function (layer, text, x, y, fill, size) {
+	layer = this.getLayer(layer);
 
-	if( Ucren.isIe )
+	if (Ucren.isIe)
 		y += 2;
 
 	return layer.text(x, y, text).attr({
@@ -35,22 +35,22 @@ exports.createText = function( layer, text, x, y, fill, size ){
 	});
 };
 
-exports.getLayer = function( name ){
+exports.getLayer = function (name) {
 	var p, layer;
 	name = name || "default";
-	
-	if( p = layers[name] ){
-	    return p;
-	}else{
-		layer = Ucren.makeElement( "div", { "class": "layer", "style": "z-index: " + ( zindexs[name] || 0 ) + ";" } );
-		Ucren.Element( "extra" ).add( layer );
-		p = layers[name] = Raphael( layer, 640, 480 );
+
+	if (p = layers[name]) {
+		return p;
+	} else {
+		layer = Ucren.makeElement("div", { "class": "layer", "style": "z-index: " + (zindexs[name] || 0) + ";" });
+		Ucren.Element("extra").add(layer);
+		p = layers[name] = Raphael(layer, 640, 480);
 		// if( Ucren.isSafari )
 		//     p.safari();
 		return p;
 	}
 };
 
-function zi(){
-    return zi.num = ++ zi.num || 2;
+function zi() {
+	return zi.num = ++zi.num || 2;
 }

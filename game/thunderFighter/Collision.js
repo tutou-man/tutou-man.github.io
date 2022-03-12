@@ -1,6 +1,3 @@
-// @open license with citation
-// @please feel free to reuse this code for any purpose, citing dougx.net
-// @see http://dougx.net/plunder/license.txt for MIT open license text
 
 
 function collision(AX1,AY1,AX2,AY2, BX1,BY1,BX2,BY2)

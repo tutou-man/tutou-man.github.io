@@ -1,15 +1,10 @@
-// @open license with citation
-// @please feel free to reuse this code for any purpose, citing dougx.net
-// @see http://dougx.net/plunder/license.txt for MIT open license text
 
-
-function keyDown(e)
-{
+function keyDown(e) {
    e.preventDefault();
 
    //dbg(e.keyCode + "down", false);
 
-   if ( e.keyCode == 80 )         // p
+   if (e.keyCode == 80)         // p
    {
       pause();
    }
@@ -17,50 +12,49 @@ function keyDown(e)
    if (g_paused)
       return;
 
-   if ( e.keyCode == 38 )              // up arrow
+   if (e.keyCode == 38)              // up arrow
    {
       g_ship.up(true);
    }
-   else if ( e.keyCode == 40 )         // down arrow
+   else if (e.keyCode == 40)         // down arrow
    {
       g_ship.down(true);
    }
-   else if ( e.keyCode == 37 )         // left arrow
+   else if (e.keyCode == 37)         // left arrow
    {
       g_ship.left(true);
    }
-   else if ( e.keyCode == 39 )         // right arrow
+   else if (e.keyCode == 39)         // right arrow
    {
       g_ship.right(true);
    }
-   else if ( e.keyCode == 90 )         // z
+   else if (e.keyCode == 90)         // z
    {
       g_ship.fire(true);
    }
 }
-function keyUp(e)
-{
+function keyUp(e) {
    e.preventDefault();
 
    //dbg(e.keyCode + "up", false);
 
-   if ( e.keyCode == 38 )              // up arrow
+   if (e.keyCode == 38)              // up arrow
    {
       g_ship.up(false);
    }
-   else if ( e.keyCode == 40 )         // down arrow
+   else if (e.keyCode == 40)         // down arrow
    {
       g_ship.down(false);
    }
-   else if ( e.keyCode == 37 )         // left arrow
+   else if (e.keyCode == 37)         // left arrow
    {
       g_ship.left(false);
    }
-   else if ( e.keyCode == 39 )         // right arrow
+   else if (e.keyCode == 39)         // right arrow
    {
       g_ship.right(false);
    }
-   else if ( e.keyCode == 90 )         // z
+   else if (e.keyCode == 90)         // z
    {
       g_ship.fire(false);
    }

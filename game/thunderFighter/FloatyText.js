@@ -1,10 +1,5 @@
-// @open license with citation
-// @please feel free to reuse this code for any purpose, citing dougx.net
-// @see http://dougx.net/plunder/license.txt for MIT open license text
 
-
-function FloatyText(text, x, y, duration)
-{
+function FloatyText(text, x, y, duration) {
    this.myText = text;
    this.myX = x;
    this.myY = y;
@@ -14,12 +9,11 @@ function FloatyText(text, x, y, duration)
    this.myFrameCounter = 0;
    this.myDuration = 36;
 
-   if ( duration != undefined )
+   if (duration != undefined)
       this.myDuration = duration;
 }
 
-FloatyText.prototype.render = function()
-{
+FloatyText.prototype.render = function () {
    var textColor = this.myFrameCounter % g_rainbow.length;
    g_context.fillStyle = g_rainbow[textColor];
 
@@ -31,7 +25,7 @@ FloatyText.prototype.render = function()
    this.myY += this.myVelY;
    this.myFrameCounter++;
 
-   if ( this.myFrameCounter > this.myDuration )
+   if (this.myFrameCounter > this.myDuration)
       return false;
    return true;
 }

@@ -1,8 +1,3 @@
-// @open license with citation
-// @please feel free to reuse this code for any purpose, citing dougx.net
-// @see http://dougx.net/plunder/license.txt for MIT open license text
-
-
 
 function Background(element, velocity)
 {

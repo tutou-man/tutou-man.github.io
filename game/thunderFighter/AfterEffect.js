@@ -1,13 +1,4 @@
-//
-// This class is for effects that don't have any collision potential with
-// other objects in the game.  Explosions, effects, whatever.  Never have
-// to do any collision detection - just render them until out of frames and
-// then discard.
-//
-// @open license with citation
-// @please feel free to reuse this code for any purpose, citing dougx.net
-// @see http://dougx.net/plunder/license.txt for MIT open license text
-//
+
 function AfterEffect(id, x, y, velx, vely)
 {
    this.myName = id;
